@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(120deg, #FF6B6B, #FAC1A1, #FF8E38);
+}
+
+header {
+  background-color: rgba(0, 206, 209, 0.6);
+  border: 2px solid #FF69B4;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Papyrus, fantasy;
+}
+
+h3 span {
+  background-image: linear-gradient(to right, #ff0000, #00ff00, #0000ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.ads {
+  box-shadow: 10px 5px 5px red;
+}
+
+.ads:hover {
+  cursor: pointer;
+}
+
+.colorized {
+  font-size: 200%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.colorized span:nth-child(1) {
+  color: #39FF14;
+}
+.colorized span:nth-child(2) {
+  color: #FF6EC7;
+}
+.colorized span:nth-child(3) {
+  color: #FFFF00
+}
+.colorized span:nth-child(4) {
+  color: #00FFFF
+}
+.colorized span:nth-child(5) {
+  color: #8A2BE2
+}
+.colorized span:nth-child(6) {
+  color: #FF4500
+}
+.colorized span:nth-child(7) {
+  color: #00FF00
+}
+.colorized span:nth-child(8) {
+  color: #FF0033
+}
+.colorized span:nth-child(9) {
+  color: #0000FF
+}
