@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+body {
+  background-image: url('https://cdn.shopify.com/s/files/1/0363/7965/6323/files/1990s_fashion.png');
+  background-size: cover;
+}
+
+h1,
+h2,
+h3 {
+  color: red;
+}
+
+h1 {
+  background-color: rgba(250, 128, 114, 0.4);
+  border: 10px solid rgba(0, 128, 0, 0.4);
+  font-size: 48px;
+  font-family: 'Rubik Iso', cursive;;
+  font-weight: bold;
+  padding: 100px;
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+em {
+  color: salmon;
+  display: block;
+  background-color: bisque;
+}
+
+.facts {
+  background-color: chartreuse;
+}
+
+.button {
+  background-color: crimson;
+  color: bisque;
+  padding: 20px;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: darkseagreen;
+}
+
+.secondary {
+  background-color: blue;
+}
