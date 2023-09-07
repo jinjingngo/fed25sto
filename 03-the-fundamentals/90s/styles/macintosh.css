@@ -1,0 +1,70 @@
+:root {
+  --default-radius: 10px;
+  --desktop-width: 800px;
+  --desktop-height: 599px;
+  --finder-menu-height: 20px;
+  --c-strip-width: 441px;
+  --c-strip-height: 24px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  background-color: #f2f2f2;
+}
+
+.border-top-left-radius {
+  border-top-left-radius: var(--default-radius);
+}
+
+.border-top-right-radius {
+  border-top-right-radius: var(--default-radius);
+}
+
+.border-bottom-left-radius {
+  border-bottom-left-radius: var(--default-radius);
+}
+
+.border-bottom-right-radius {
+  border-bottom-right-radius: var(--default-radius);
+}
+
+.os8 {
+  place-self: center;
+  width: var(--desktop-width);
+  height: var(--desktop-height);
+  background-color: #63639c;
+}
+
+.finder {
+  width: var(--desktop-width);
+  height: var(--finder-menu-height);
+  background-image: url('../images/finder.png');
+}
+
+.desktop-icons {
+  width: 116px;
+  float: right;
+  background-image: url('../images/dticons.png');
+  height: calc(var(--desktop-height) - var(--finder-menu-height));
+}
+
+.c-strip {
+  width: var(--c-strip-width);
+  height: var(--c-strip-height);
+  background-image: url('../images/cstrip.png');
+  position: absolute;
+  top: calc(calc(100% / 2) + calc(599px / 2 - 24px));
+}
