@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.item {
+  /* grid-column: 2/4; */
+  grid-column: span 2;
+  grid-row: 2/4;
+  background-color: salmon;
+}
