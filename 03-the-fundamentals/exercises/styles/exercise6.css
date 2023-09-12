@@ -1,5 +1,11 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.item {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: salmon;
 }
