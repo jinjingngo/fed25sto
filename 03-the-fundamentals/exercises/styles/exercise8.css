@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  background-color: grey;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: salmon;
+  margin: 0 1rem;
+}
+
+.positioned {
+  background-color: purple;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
