@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+.site-header {
+  padding: 1rem;
+}
+
+.site-header-menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+.site-header-menu a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.8125rem;
+}
+
+.site-header-menu a:hover {
+  text-decoration: underline;
+}
+
+.site-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-content-container {
+  width: 100%;
+  max-width: 34rem;
+}
+
+.site-content-logo,
+.site-content-search {
+  display: block;
+}
+
+.site-content-logo {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.site-content-search-container {
+  display: flex;
+  border: 1px solid #dfe1e5;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.site-content-search-container:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+  border-color: rgba(223, 225, 229, 0)
+}
+
+.site-content-search-container span {
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-content-search-container svg {
+  fill: #9aa0a6;
+  width: 1.26rem;
+}
+
+.site-content-search-input-container {
+  flex: 1;
+}
+
+.site-content-search-input-container input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 1.5rem;
+}
+
+.site-content-search {
+  width: 100%;
+  background-color: transparent;
+  color: #000;
+}
+
+.site-content-search:focus,
+.site-content-search:hover {
+  border: 0;
+  outline: none;
+}
+
+.site-content-search-media {
+  width: 3.25rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.site-content-search-media .voice,
+.site-content-search-media .image {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.site-content-search-media .voice:hover,
+.site-content-search-media .image:hover {
+  cursor: pointer;
+}
+
+.site-content-search-media .voice svg,
+.site-content-search-media .image svg {
+  width: 100%;
+}
+
+.site-content-buttons {
+  text-align: center;
+  padding: 1rem;
+}
+
+.site-content-buttons button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: .25rem;
+  color: #3c4043;
+  padding: 0 1rem;
+  line-height: 1.6875rem;
+  height: 2.25rem;
+  cursor: pointer;
+  user-select: none;
+  margin: .6875rem .25rem;
+}
+
+.site-content-buttons button:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+
+.site-content-offer {
+  color: #4d5156;
+  line-height: 1.75rem;
+  font-size: small;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.site-content-offer a {
+  text-decoration: none;
+}
+
+.site-content-offer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  background: #f2f2f2;
+  color: #70757a;
+  font-size: 0.875rem;
+}
+
+.site-footer-region {
+  padding: .9375rem 1.875rem;
+  border-bottom: 1px solid #dadce0;
+  font-size: .9375rem;
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.site-footer-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  min-width: 30%;
+  order: 1;
+
+}
+
+.carbon {
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carbon img {
+  height: 14px;
+  margin-right: 6px;
+}
+
+.site-footer-links-container a,
+.carbon a,
+.site-footer-links-legal a {
+  color: #70757a;
+  text-decoration: none;
+}
+
+.site-footer-links-container a:hover,
+.carbon a:hover,
+.site-footer-links-legal a:hover {
+  text-decoration: underline;
+}
+
+.site-footer-links-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 30%;
+  order: 3;
+}
+
+
+.site-footer-links-container a,
+.carbon a,
+.site-footer-links-legal a {
+  display: block;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .site-footer-links-container,
+  .carbon,
+  .site-footer-links-legal {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .carbon {
+    order: 0;
+  }
+}
