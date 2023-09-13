@@ -1,6 +1,9 @@
 .container {
   display: flex;
   background-color: grey;
+  margin-top: 200px;
+  margin-left: 200px;
+  position: relative;
 }
 
 .item {
