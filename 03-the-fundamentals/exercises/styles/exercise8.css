@@ -1,0 +1,33 @@
+body {
+  height: 200vh;
+}
+
+.container {
+  display: flex;
+  background-color: grey;
+  position: relative;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: salmon;
+  margin: 0 1rem;
+}
+
+.positioned {
+  background-color: purple;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
+
+.transformed {
+  background-color: aqua;
+}
+
+.transformed:hover {
+  translate: 10px 30px;
+  rotate: 45deg;
+  scale: 0.5;
+}
