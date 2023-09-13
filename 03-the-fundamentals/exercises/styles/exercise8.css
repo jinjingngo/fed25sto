@@ -12,7 +12,7 @@
 
 .positioned {
   background-color: purple;
-  position: relative;
+  position: absolute;
   top: 30px;
   left: 30px;
 }
