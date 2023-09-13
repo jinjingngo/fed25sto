@@ -1,8 +1,10 @@
+body {
+  height: 200vh;
+}
+
 .container {
   display: flex;
   background-color: grey;
-  margin-top: 200px;
-  margin-left: 200px;
   position: relative;
 }
 
@@ -15,23 +17,7 @@
 
 .positioned {
   background-color: purple;
-  position: absolute;
+  position: fixed;
   top: 30px;
   left: 30px;
-}
-
-.product {
-  width: 300px;
-  position: relative;
-}
-
-.product img {
-  display: block;
-  max-width: 100%;
-}
-
-.product h4 {
-  position: absolute;
-  bottom: 0;
-  margin: 0;
 }
