@@ -1,0 +1,28 @@
+@import url("./reset.css");
+@import url("./layout.css");
+
+body {
+  display: grid;
+}
+
+main {
+  display: grid;
+  gap: 3rem;
+}
+
+
+.upper,
+.lower {
+  width: 100%;
+  display: grid;
+}
+
+.upper {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.lower {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}

@@ -1,0 +1,19 @@
+@import url("./reset.css");
+@import url("./layout.css");
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.left,
+.middle,
+.right {
+  width: 33%;
+}

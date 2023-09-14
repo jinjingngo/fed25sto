@@ -1,0 +1,20 @@
+@import url("./reset.css");
+@import url("./layout.css");
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  gap: 8vh;
+}
+
+.left {
+  width: 20vh;
+}
+
+.right {
+  flex: 1;
+}

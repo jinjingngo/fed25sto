@@ -1,0 +1,31 @@
+@import url("./reset.css");
+@import url("./layout.css");
+
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  gap: 8vh;
+}
+
+.left {
+  width: 20vh;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.right>.blocks {
+  width: calc(50% - 1rem);
+  height: calc(50% - 1rem);
+}

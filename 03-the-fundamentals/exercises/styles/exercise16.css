@@ -1,0 +1,36 @@
+@import url("./reset.css");
+@import url("./layout.css");
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.upper,
+.lower {
+  width: 100%;
+  height: 49%;
+  display: flex;
+}
+
+.upper {
+  gap: 2rem;
+}
+
+.upper>div {
+  width: 33.33%;
+}
+
+.lower {
+  gap: 2rem;
+}
+
+.lower>div {
+  width: 50%;
+}
