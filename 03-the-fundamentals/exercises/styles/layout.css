@@ -5,6 +5,7 @@
 body {
   background-color: #000;
   gap: 10vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .blocks {
@@ -14,6 +15,12 @@ body {
 header,
 footer {
   height: 10vh;
+}
+
+header {
+  line-height: 10vh;
+  text-align: center;
+  font-size: 2rem;
 }
 
 main {
