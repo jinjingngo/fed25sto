@@ -1,0 +1,45 @@
+:root {
+  --default-radius: 1rem;
+}
+
+body {
+  background-color: #000;
+  gap: 10vh;
+}
+
+.blocks {
+  background-color: #eee;
+}
+
+header,
+footer {
+  height: 10vh;
+}
+
+main {
+  height: 60vh;
+}
+
+:root {
+  --default-radius: 1rem;
+}
+
+.top-radius {
+  border-top-left-radius: var(--default-radius);
+  border-top-right-radius: var(--default-radius);
+}
+
+.right-radius {
+  border-top-right-radius: var(--default-radius);
+  border-bottom-right-radius: var(--default-radius);
+}
+
+.bottom-radius {
+  border-bottom-left-radius: var(--default-radius);
+  border-bottom-right-radius: var(--default-radius);
+}
+
+.left-radius {
+  border-top-left-radius: var(--default-radius);
+  border-bottom-left-radius: var(--default-radius);
+}
