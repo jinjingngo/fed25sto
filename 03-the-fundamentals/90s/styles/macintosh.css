@@ -1,10 +1,16 @@
+@font-face {
+  font-family: Chicago;
+  src: url('./ChicagoFLF.ttf');
+}
+
 :root {
-  --default-radius: 10px;
-  --desktop-width: 800px;
-  --desktop-height: 599px;
-  --finder-menu-height: 20px;
-  --c-strip-width: 441px;
-  --c-strip-height: 24px;
+  --default-radius: 0.625rem;
+  --desktop-width: 50rem;
+  --desktop-height: 37.5rem;
+  --finder-menu-height: 1.25rem;
+  --c-strip-width: 27.5625rem;
+  --c-strip-height: 1.5rem;
+  --desktop-icon-height: 35.625rem;
 }
 
 html,
@@ -23,6 +29,7 @@ body {
 body {
   display: grid;
   background-color: #f2f2f2;
+  font-family: Chicago;
 }
 
 .border-top-left-radius {
@@ -41,10 +48,17 @@ body {
   border-bottom-right-radius: var(--default-radius);
 }
 
-.os8 {
+.os8,
+.os8-mask {
   place-self: center;
+  display: grid;
   width: var(--desktop-width);
   height: var(--desktop-height);
+  grid-template-rows: repeat(74, 0.506rem);
+  grid-template-columns: repeat(100, 0.5rem);
+}
+
+.os8 {
   background-color: #63639c;
 }
 
@@ -57,14 +71,96 @@ body {
 .desktop-icons {
   width: 116px;
   float: right;
-  background-image: url('../images/dticons.png');
-  height: calc(var(--desktop-height) - var(--finder-menu-height));
+  background-image: url('../images/dticons.jpg');
+  height: var(--desktop-icon-height);
+  grid-row: -72;
+  grid-column: -16;
 }
 
 .c-strip {
   width: var(--c-strip-width);
   height: var(--c-strip-height);
   background-image: url('../images/cstrip.png');
+  grid-column: 1;
+  grid-row: -4;
+}
+
+.os8-mask {
   position: absolute;
-  top: calc(calc(100% / 2) + calc(599px / 2 - 24px));
+}
+
+.menu-mask {
+  top: .125rem;
+  position: relative;
+  display: inline-flex;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.menu-mask:hover {
+  background-color: rgba(221 221 221 / 70%);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.7);
+}
+
+.menu-apple {
+  grid-area: 1 / 2 / span 2 / span 4;
+}
+
+.menu-file {
+  grid-area: 1 / 6 / span 2 / span 4;
+}
+
+.menu-edit {
+  grid-area: 1 / 10 / span 2 / span 5;
+}
+
+.menu-view {
+  grid-area: 1 / 15 / span 2 / span 5;
+}
+
+
+.menu-special {
+  grid-area: 1 / 20 / span 2 / span 8;
+}
+
+.menu-help {
+  grid-area: 1 / 28 / span 2 / span 5;
+}
+
+.menu-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1 / 82 / span 2 / span 8;
+  top: .125rem;
+  position: relative;
+  background-color: rgb(221, 221, 221);
+  font-size: 0.7rem;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.colon {
+  animation: blink 1s infinite;
+}
+
+.midnight {
+  text-indent: 0.125rem;
+}
+
+
+.menu-finder {
+  grid-area: 1 / 90 / span 2 / span 10;
 }
