@@ -8,11 +8,11 @@ const tock = () => {
   const hours = now.getHours() % 12;
   const hour = hours ? hours : 12;
   const minutes = String(now.getMinutes()).padStart(2, '0');
-  const amPm = now.getHours() >= 12 ? 'pm' : 'am';
+  const midnight = now.getHours() >= 12 ? 'pm' : 'am';
 
   CLOCK_HOUR.textContent = hour;
   CLOCK_MINUTE.textContent = minutes;
-  CLOCK_MIDNIGHT.textContent = amPm;
+  CLOCK_MIDNIGHT.textContent = midnight;
 }
 
 (() => {
