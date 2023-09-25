@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  gap: 1rem;
+}
+
+.box-1,
+.box-2 {
+  background-color: salmon;
+  width: calc(50% - 0.5rem);
+  height: 10rem;
+}
+
+@media (max-width: 400px) {
+  body {
+    flex-direction: column;
+  }
+
+  .box-1,
+  .box-2 {
+    width: 100%;
+  }
+}

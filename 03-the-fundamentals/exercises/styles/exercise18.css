@@ -1,0 +1,15 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  background-color: saddlebrown
+}
+
+@media (max-width: 800px) {
+  p {
+    background-color: salmon;
+  }
+}

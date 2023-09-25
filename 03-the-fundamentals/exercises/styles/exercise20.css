@@ -1,0 +1,15 @@
+@import url("./reset.css");
+@import url("./responsiveness.css");
+
+.page-121-main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  text-align: center;
+}
+
+@media (min-width: 62rem) {
+  .page-121-main {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 3fr;
+  }
+}
