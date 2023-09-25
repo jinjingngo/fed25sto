@@ -1,0 +1,24 @@
+@import url("./reset.css");
+@import url("./responsiveness.css");
+
+.page-123-main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.page-123-main section:first-child {
+  grid-column-end: span 2;
+}
+
+@media (min-width: 62rem) {
+  .page-123-main {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .page-123-main section:first-child {
+    grid-column-end: unset;
+  }
+}

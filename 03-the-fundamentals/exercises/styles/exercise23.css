@@ -1,0 +1,29 @@
+@import url("./reset.css");
+@import url("./responsiveness.css");
+
+body {
+  grid-template-rows: 10vh auto;
+}
+
+.page-124-main {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.page-124-main section:first-child {
+  grid-column-end: span 2;
+}
+
+@media (min-width: 62rem) {
+  .page-124-main {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .page-124-main section:first-child {
+    grid-column-end: unset;
+    grid-row-end: span 2;
+  }
+}
