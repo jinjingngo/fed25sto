@@ -8,7 +8,8 @@
   text-align: center;
 }
 
-.page-123-main section:first-child {
+.page-123-main section:last-child {
+  grid-row: 1;
   grid-column-end: span 2;
 }
 
@@ -18,7 +19,8 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .page-123-main section:first-child {
+  .page-123-main section:last-child {
+    grid-row: unset;
     grid-column-end: unset;
   }
 }
