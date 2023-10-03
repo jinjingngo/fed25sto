@@ -1,0 +1,27 @@
+@keyframes magic {
+  0% {
+    background-color: aquamarine;
+    translate: 0% 0%;
+    rotate: 0deg;
+  }
+
+  50% {
+    background-color: salmon;
+    translate: 50% 50%;
+    rotate: 45deg;
+    border-radius: 25%;
+  }
+
+  100% {
+    background-color: aquamarine;
+    translate: 0% 0%;
+    rotate: -45deg;
+  }
+}
+
+.box {
+  width: 25rem;
+  height: 25rem;
+  background-color: salmon;
+  animation: magic 1.5s infinite;
+}

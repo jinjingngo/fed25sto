@@ -1,0 +1,14 @@
+.cube {
+  width: 25rem;
+  height: 25rem;
+  background-color: salmon;
+  transition: background-color 2s ease-in-out 1.5s,
+    translate 0.5s linear 0.5s,
+    rotate 0.5s linear 0.5s;
+}
+
+.cube:hover {
+  background-color: aquamarine;
+  translate: 50% 50%;
+  rotate: 45deg;
+}
