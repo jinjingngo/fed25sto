@@ -33,13 +33,15 @@ header {
   grid-template-rows: min-content;
   place-items: center;
   row-gap: 1rem;
+  user-select: none;
 }
 
 .logo {
   width: 5rem;
   height: 5rem;
   place-self: center start;
-  transform: translateX(10%);
+  margin-left: 0.5rem;
+  animation: backInLeft 0.5s;
 }
 
 .page-indicator {
@@ -62,11 +64,13 @@ header {
 
 .menu::after {
   content: '';
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2rem;
+  height: 1.8rem;
   background-image: url("../images/menu.png");
   background-size: cover;
+  cursor: pointer;
 }
+
 
 .nav {
   width: 100%;
@@ -75,7 +79,26 @@ header {
   grid-template-rows: repeat(3, 1fr);
   place-items: center;
   grid-column: span 3;
+  overflow: hidden;
+  height: 0;
 }
+
+.menu:checked~.nav {
+  height: auto;
+  overflow: unset;
+}
+
+@media (min-width: 901px) {
+  .menu {
+    visibility: hidden;
+  }
+
+  .nav {
+    height: auto;
+    overflow: unset;
+  }
+}
+
 
 .nav__brick-animation {
   grid-column: span 3;
@@ -83,8 +106,15 @@ header {
 
 .nav__welcome {
   grid-column: span 7;
-  animation: bounceInDown;
-  animation-duration: 1s;
+  animation: bounceInDown 1s, headShake 1s 1s infinite;
+}
+
+.nav__news {
+  animation: shakeX 5s infinite;
+}
+
+.nav__green {
+  animation: pulse 1s infinite;
 }
 
 .nav_clickable {
@@ -95,24 +125,14 @@ header {
   align-items: center;
   justify-content: end;
   cursor: pointer;
+  text-decoration: none;
+  animation: heartBeat 1s infinite;
 }
 
 .nav_clickable:hover {
-  animation: bounce;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
+  text-decoration: underline;
+  animation: bounce 0.8s infinite;
 }
-
-/* .menu:checked~.nav {
-  visibility: visible;
-} */
-
-
-
-/*
-@media (max-width: 900px){}
-@media (min-width: 901px){}
-*/
 
 main {
   flex: 1;
