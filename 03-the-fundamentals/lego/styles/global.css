@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'LEGO';
+  font-style: normal;
+  font-weight: normal;
+  src: url('LEGO.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LEGO Outlined';
+  font-style: normal;
+  font-weight: normal;
+  src: url('LEGO Outlined.woff') format('woff');
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%
+}
+
+body {
+  font-size: 1rem;
+  background-image: url("../images/legoknop.gif");
+  display: flex;
+  flex-direction: column;
+  font-family: LEGO;
+}
+
+header {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content;
+  place-items: center;
+  row-gap: 1rem;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  place-self: center start;
+  transform: translateX(10%);
+}
+
+.page-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 0.5s;
+}
+
+.menu {
+  appearance: none;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-self: center end;
+  transform: translateX(10%);
+}
+
+.menu::after {
+  content: '';
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url("../images/menu.png");
+  background-size: cover;
+}
+
+.nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  grid-column: span 3;
+}
+
+.nav__brick-animation {
+  grid-column: span 3;
+}
+
+.nav__welcome {
+  grid-column: span 7;
+  animation: bounceInDown;
+  animation-duration: 1s;
+}
+
+.nav_clickable {
+  width: 5rem;
+  height: 6.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.nav_clickable:hover {
+  animation: bounce;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+/* .menu:checked~.nav {
+  visibility: visible;
+} */
+
+
+
+/*
+@media (max-width: 900px){}
+@media (min-width: 901px){}
+*/
+
+main {
+  flex: 1;
+}
+
+footer {
+  height: 7.5rem;
+}
