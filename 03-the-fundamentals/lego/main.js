@@ -1,6 +1,6 @@
 const lego1996 = (() => {
-  const showClassName = 'section__tab-show';
-  const tabs = document.querySelector('.sections').children;
+  const showClassName = 'article-show';
+  const tabs = document.querySelector('.article').children;
   let previousTab = null;
 
   const toggleTab = (tabName) => {
