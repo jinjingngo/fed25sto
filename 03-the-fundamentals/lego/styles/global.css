@@ -146,29 +146,29 @@ body {
   animation: heartBeat 1s infinite;
 }
 
-.page-indicator:hover,
+.header__indicator:hover,
 .nav__clickable:hover {
   text-decoration: underline;
   animation: bounce 0.8s infinite;
 }
 
-main {
+.article {
   flex: 1;
   display: grid;
   align-items: center;
   padding: 0 2rem;
 }
 
-.sections__home,
-.sections__surf-club,
-.sections__product,
-.sections__play,
-.sections__worldwide,
-.sections__learn,
-.sections__service,
-.sections__about-us,
-.sections__news,
-.sections__green {
+.article__home,
+.article__surf-club,
+.article__product,
+.article__play,
+.article__worldwide,
+.article__learn,
+.article__service,
+.article__about-us,
+.article__news,
+.article__green {
   left: 0;
   display: none;
   height: auto;
@@ -176,61 +176,61 @@ main {
   position: relative;
 }
 
-.section__tab-show {
+.article-show {
   display: block;
   visibility: visible;
   animation-duration: 0.8s;
 }
 
-.sections__home {
+.article__home {
   display: flex;
   animation-name: zoomIn;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.sections__home>p {
+.article__home>p {
   line-height: 1rem;
 }
 
-.sections__surf-club {
+.article__surf-club {
   animation-name: zoomInDown;
 }
 
-.sections__product {
+.article__product {
   animation-name: zoomInLeft;
 }
 
-.sections__play {
+.article__play {
   animation-name: zoomInRight;
 }
 
-.sections__worldwide {
+.article__worldwide {
   animation-name: zoomInUp;
 }
 
-.sections__learn {
+.article__learn {
   animation-name: slideInDown;
 }
 
-.sections__service {
+.article__service {
   animation-name: slideInLeft;
 }
 
-.sections__about-us {
+.article__about-us {
   animation-name: slideInDown;
 }
 
-.sections__news {
+.article__news {
   animation-name: slideInLeft;
 }
 
-.sections__green {
+.article__green {
   animation-name: jackInTheBox;
 }
 
 
-footer {
+.footer {
   height: min-content;
   display: grid;
   gap: 0.5rem;
@@ -239,38 +239,38 @@ footer {
   grid-template-rows: 1.5rem 1fr;
 }
 
-.copyright {
+.footer__copyright {
   display: flex;
   justify-content: space-evenly;
   grid-column: span 2;
 }
 
-.go-to-top,
-.go-home {
+.footer__go-to-top,
+.footer__go-home {
   place-self: center;
   width: 3.75rem;
   text-wrap: nowrap;
 }
 
-.go-home img {
+.footer__go-home img {
   height: 3.25rem;
   margin: 0 auto;
 }
 
-.copyright>p:first-child::first-letter,
-.sections__home>p:first-child::first-letter {
+.footer__copyright>p:first-child::first-letter,
+.article__home>p:first-child::first-letter {
   font-family: 'Press Start 2P', cursive;
   font-style: italic;
   font-weight: bolder;
 }
 
 @media (min-width: 901px) {
-  footer {
+  .footer {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
 
-  .copyright {
+  .footer__copyright {
     place-self: center;
     display: flex;
     justify-content: space-evenly;
@@ -279,11 +279,11 @@ footer {
     order: 2;
   }
 
-  .go-to-top {
+  .footer__go-to-top {
     order: 1;
   }
 
-  .go-home {
+  .footer__go-home {
     order: 3;
   }
 
