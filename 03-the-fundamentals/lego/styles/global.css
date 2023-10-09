@@ -26,7 +26,7 @@ body {
   font-family: LEGO;
 }
 
-header {
+.header {
   height: fit-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -96,7 +96,7 @@ header {
   height: 0;
 }
 
-header:not(:has(.menu:checked)) {
+.header:not(:has(.menu:checked)) {
   margin-bottom: 1rem;
 }
 
