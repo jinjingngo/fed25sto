@@ -12,8 +12,8 @@
   src: url('LEGO Outlined.woff') format('woff');
 }
 
-body,
-html {
+html,
+body {
   width: 100%;
   height: 100%
 }
@@ -36,7 +36,7 @@ body {
   font-family: LEGO Outlined;
 }
 
-.logo {
+.header__logo {
   width: 5rem;
   height: 5rem;
   place-self: center start;
@@ -44,7 +44,7 @@ body {
   animation: backInLeft 0.5s;
 }
 
-.page-indicator {
+.header__indicator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +56,7 @@ body {
   text-decoration: none;
 }
 
-.menu {
+.header__menu {
   appearance: none;
   width: 3rem;
   height: 3rem;
@@ -67,7 +67,7 @@ body {
   transform: translateX(-10%);
 }
 
-.menu::after {
+.header__menu::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -77,11 +77,11 @@ body {
   cursor: pointer;
 }
 
-.menu:hover::after {
+.header__menu:hover::after {
   animation: shakeY 1s infinite;
 }
 
-.menu:checked::after {
+.header__menu:checked::after {
   rotate: 0deg;
 }
 
@@ -96,18 +96,18 @@ body {
   height: 0;
 }
 
-.header:not(:has(.menu:checked)) {
+.header:not(:has(.header__menu:checked)) {
   margin-bottom: 1rem;
 }
 
-.menu:checked~.nav {
+.header__menu:checked~.nav {
   height: auto;
   overflow: unset;
   padding: 1rem 0;
 }
 
 @media (min-width: 901px) {
-  .menu {
+  .header__menu {
     visibility: hidden;
   }
 
