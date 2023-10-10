@@ -224,11 +224,37 @@ body {
 
 .article__play {
   animation-name: zoomInRight;
+  place-items: center;
+  gap: 0.8rem;
+}
+
+.article__game {
+  display: grid;
+  grid-template-columns: 14.25rem 14.25rem;
+}
+
+.article__game-header,
+.article__game-top,
+.article__game-play {
+  max-width: 28.5rem;
+  grid-column: span 2;
+}
+
+.article__game-yes,
+.article__game-no {
+  max-width: 14.25rem;
+  cursor: pointer;
+}
+
+.article__game-play {
+  cursor: pointer;
 }
 
 .article__worldwide {
   animation-name: zoomInUp;
+  grid-area: 0.8rem;
 }
+
 
 .article__learn {
   animation-name: slideInDown;
@@ -266,7 +292,9 @@ body {
 }
 
 .article__green h1,
-.article__product h1 {
+.article__product h1,
+.article__play h1,
+.article__worldwide h1 {
   text-align: center;
 }
 
