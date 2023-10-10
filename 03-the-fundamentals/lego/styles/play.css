@@ -2,7 +2,7 @@
 @import url(global.css);
 
 .article__play {
-  animation-name: zoomInRight;
+  animation: zoomInRight 1s;
   place-items: center;
   gap: 0.8rem;
 }

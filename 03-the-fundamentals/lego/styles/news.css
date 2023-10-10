@@ -2,9 +2,7 @@
 @import url(global.css);
 
 .article__news {
-  animation-name: slideInLeft;
-  /* animation-delay: 1s;
-  animation-duration: 0.8s; */
+  animation: slideInLeft 1s;
   gap: 0.8rem;
 }
 

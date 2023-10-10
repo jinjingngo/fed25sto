@@ -2,7 +2,7 @@
 @import url(global.css);
 
 .article__green {
-  animation-name: jackInTheBox;
+  animation: jackInTheBox 1s;
   gap: 0.8rem;
 }
 

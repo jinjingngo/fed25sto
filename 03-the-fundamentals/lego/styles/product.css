@@ -2,7 +2,7 @@
 @import url(global.css);
 
 .article__product {
-  animation-name: zoomInLeft;
+  animation: zoomInLeft 1s;
   gap: 0.8rem;
 }
 

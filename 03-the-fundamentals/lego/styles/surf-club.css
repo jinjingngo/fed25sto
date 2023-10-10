@@ -2,6 +2,6 @@
 @import url(global.css);
 
 .article__surf-club {
-  animation-name: zoomInDown;
+  animation: zoomInDown 1s;
   gap: 0.8rem;
 }

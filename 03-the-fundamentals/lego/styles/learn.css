@@ -2,7 +2,7 @@
 @import url(global.css);
 
 .article__learn {
-  animation-name: slideInDown;
+  animation: slideInDown 1s;
 
 }
 

@@ -2,6 +2,6 @@
 @import url(global.css);
 
 .article__about-us {
-  animation-name: slideInDown;
+  animation: slideInDown 1s;
   gap: 0.8rem;
 }

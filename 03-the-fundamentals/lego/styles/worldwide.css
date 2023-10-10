@@ -2,6 +2,6 @@
 @import url(global.css);
 
 .article__worldwide {
-  animation-name: zoomInUp;
+  animation: zoomInUp 1s;
   grid-area: 0.8rem;
 }

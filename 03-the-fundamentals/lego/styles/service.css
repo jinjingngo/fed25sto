@@ -2,7 +2,7 @@
 @import url(global.css);
 
 .article__service {
-  animation-name: slideInLeft;
+  animation: slideInLeft 1s;
 }
 
 .article__customer-services {
