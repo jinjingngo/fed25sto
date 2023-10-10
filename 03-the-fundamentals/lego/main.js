@@ -31,4 +31,4 @@ const lego1996 = (() => {
   return {toggleArticle};
 })();
 
-lego1996.toggleArticle('green')
+lego1996.toggleArticle('product')

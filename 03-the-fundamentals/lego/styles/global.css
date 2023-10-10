@@ -193,6 +193,14 @@ body {
 
 .article__surf-club {
   animation-name: zoomInDown;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.article__login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .article__product {
