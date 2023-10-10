@@ -3,7 +3,7 @@
 
 .article__product {
   animation: zoomInLeft 1s;
-  gap: 0.8rem;
+  gap: var(--gap-08);
 }
 
 .article__product h2 {

@@ -3,5 +3,9 @@
 
 .article__worldwide {
   animation: zoomInUp 1s;
-  grid-area: 0.8rem;
+  gap: var(--gap-2);
+}
+
+.article__worldwide img {
+  max-width: 28rem;
 }

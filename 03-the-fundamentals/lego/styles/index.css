@@ -1,2 +1,13 @@
 @import url(reset.css);
 @import url(global.css);
+
+
+.article__home {
+  animation-name: zoomIn;
+  gap: var(--gap-08);
+  align-items: flex-start;
+}
+
+.article__home>p {
+  line-height: 1rem;
+}

@@ -4,5 +4,27 @@
 .article__play {
   animation: zoomInRight 1s;
   place-items: center;
-  gap: 0.8rem;
+  gap: var(--gap-08);
+}
+
+.article__game {
+  display: grid;
+  grid-template-columns: 14.25rem 14.25rem;
+}
+
+.article__game-header,
+.article__game-top,
+.article__game-play {
+  max-width: 28.5rem;
+  grid-column: span 2;
+}
+
+.article__game-yes,
+.article__game-no {
+  max-width: 14.25rem;
+  cursor: pointer;
+}
+
+.article__game-play {
+  cursor: pointer;
 }

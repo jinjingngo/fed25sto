@@ -3,7 +3,8 @@
 
 .article__news {
   animation: slideInLeft 1s;
-  gap: 0.8rem;
+  gap: var(--gap-08);
+  align-items: flex-start;
 }
 
 .article__news p {

@@ -3,5 +3,5 @@
 
 .article__about-us {
   animation: slideInDown 1s;
-  gap: 0.8rem;
+  gap: var(--gap-2)
 }

@@ -3,5 +3,13 @@
 
 .article__surf-club {
   animation: zoomInDown 1s;
-  gap: 0.8rem;
+  gap: var(--gap-08);
+  align-items: flex-start;
+}
+
+
+.article__login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
