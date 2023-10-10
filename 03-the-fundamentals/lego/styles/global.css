@@ -168,18 +168,9 @@ body {
 .article__about-us,
 .article__news,
 .article__green {
-  left: 0;
-  display: none;
-  height: auto;
-  visibility: hidden;
+  display: flex;
   position: relative;
   flex-direction: column;
-}
-
-.article-show {
-  display: flex;
-  visibility: visible;
-  animation-duration: 0.8s;
 }
 
 .article__home {
@@ -191,41 +182,10 @@ body {
   line-height: 1rem;
 }
 
-.article__surf-club {
-  animation-name: zoomInDown;
-  gap: 0.8rem;
-}
-
 .article__login {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.article__product {
-  animation-name: zoomInLeft;
-  gap: 0.8rem;
-}
-
-.article__product h2 {
-  text-align: center;
-}
-
-.article__production-line {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 3.74rem 2.5rem 1fr;
-  gap: 0.5rem;
-}
-
-.article__divider_product {
-  gap: 3rem;
-}
-
-.article__play {
-  animation-name: zoomInRight;
-  place-items: center;
-  gap: 0.8rem;
 }
 
 .article__game {
@@ -250,51 +210,8 @@ body {
   cursor: pointer;
 }
 
-.article__worldwide {
-  animation-name: zoomInUp;
-  grid-area: 0.8rem;
-}
-
-.article__learn {
-  animation-name: slideInDown;
-
-}
-
-.article__learning-center {
-  display: grid;
-  gap: 0.8rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2.0625rem 1fr;
-  place-items: center;
-}
-
 .article__welcome-to-dacta {
   grid-column: span 3;
-}
-
-.article__service {
-  animation-name: slideInLeft;
-}
-
-.article__customer-services {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 10.625rem 7.5rem;
-  place-items: center;
-  gap: 0.8rem;
-}
-
-.article__customer-services span {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.article__about-us {
-  animation-name: slideInDown;
-  gap: 0.8rem;
 }
 
 .article__about-lego {
@@ -304,27 +221,10 @@ body {
   justify-content: space-between;
 }
 
-.article__news {
-  animation-name: slideInLeft;
-  gap: 0.8rem;
-}
-
-.article__news p {
-  display: flex;
-  max-width: 38rem;
-  align-items: center;
-  gap: 2rem;
-}
-
 .article__divider,
 .article__divider_product {
   display: flex;
   justify-content: center;
-}
-
-.article__green {
-  animation-name: jackInTheBox;
-  gap: 0.8rem;
 }
 
 .article__green h1,
@@ -334,19 +234,6 @@ body {
 .article__service h1,
 .article__about-us h1 {
   text-align: center;
-}
-
-.article__green section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.article__ul {
-  margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }
 
 .footer {

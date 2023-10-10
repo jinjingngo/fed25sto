@@ -1,0 +1,16 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__news {
+  animation-name: slideInLeft;
+  /* animation-delay: 1s;
+  animation-duration: 0.8s; */
+  gap: 0.8rem;
+}
+
+.article__news p {
+  display: flex;
+  max-width: 38rem;
+  align-items: center;
+  gap: 2rem;
+}

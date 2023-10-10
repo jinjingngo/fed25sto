@@ -1,0 +1,8 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__play {
+  animation-name: zoomInRight;
+  place-items: center;
+  gap: 0.8rem;
+}

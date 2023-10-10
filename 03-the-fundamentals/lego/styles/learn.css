@@ -1,0 +1,15 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__learn {
+  animation-name: slideInDown;
+
+}
+
+.article__learning-center {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2.0625rem 1fr;
+  place-items: center;
+}

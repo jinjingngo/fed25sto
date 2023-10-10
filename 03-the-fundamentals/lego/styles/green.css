@@ -1,0 +1,21 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__green {
+  animation-name: jackInTheBox;
+  gap: 0.8rem;
+}
+
+
+.article__green section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.article__ul {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
