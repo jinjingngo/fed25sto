@@ -17,8 +17,7 @@
   --gap-08: 0.8rem;
   --gap-2: 2rem;
   --gap-5: 5rem;
-  --vintage-yellow: #F3C305;
-  --vintage-red: #CA1F08;
+  --lego-blue: #0055BF;
 }
 
 html,
@@ -40,7 +39,7 @@ a:hover,
 a:active,
 a:visited {
   font-family: LEGO Outlined;
-  color: var(--vintage-red);
+  color: var(--lego-blue);
   font-weight: bolder;
 }
 
