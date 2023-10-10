@@ -173,6 +173,7 @@ body {
   height: auto;
   visibility: hidden;
   position: relative;
+  flex-direction: column;
 }
 
 .article-show {
@@ -183,7 +184,6 @@ body {
 
 .article__home {
   animation-name: zoomIn;
-  flex-direction: column;
   gap: 0.8rem;
 }
 
@@ -193,7 +193,6 @@ body {
 
 .article__surf-club {
   animation-name: zoomInDown;
-  flex-direction: column;
   gap: 0.8rem;
 }
 
@@ -205,6 +204,22 @@ body {
 
 .article__product {
   animation-name: zoomInLeft;
+  gap: 0.8rem;
+}
+
+.article__product h2 {
+  text-align: center;
+}
+
+.article__production-line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 3.74rem 2.5rem 1fr;
+  gap: 0.5rem;
+}
+
+.article__divider_product {
+  gap: 3rem;
 }
 
 .article__play {
@@ -229,7 +244,6 @@ body {
 
 .article__news {
   animation-name: slideInLeft;
-  flex-direction: column;
   gap: 0.8rem;
 }
 
@@ -240,18 +254,19 @@ body {
   gap: 2rem;
 }
 
-.article__divider {
+.article__divider,
+.article__divider_product {
   display: flex;
   justify-content: center;
 }
 
 .article__green {
   animation-name: jackInTheBox;
-  flex-direction: column;
   gap: 0.8rem;
 }
 
-.article__green h1 {
+.article__green h1,
+.article__product h1 {
   text-align: center;
 }
 
