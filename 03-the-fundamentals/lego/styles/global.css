@@ -155,8 +155,7 @@ body {
 .article {
   flex: 1;
   display: grid;
-  align-items: center;
-  padding: 0 2rem;
+  padding: 0 4.5rem;
 }
 
 .article__home,
