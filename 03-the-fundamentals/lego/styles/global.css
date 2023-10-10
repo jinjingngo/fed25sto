@@ -232,8 +232,32 @@ body {
   gap: 2rem;
 }
 
+.article__divider {
+  display: flex;
+  justify-content: center;
+}
+
 .article__green {
   animation-name: jackInTheBox;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.article__green h1 {
+  text-align: center;
+}
+
+.article__green section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.article__ul {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .footer {
