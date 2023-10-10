@@ -1,0 +1,15 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__surf-club {
+  animation: zoomInDown 1s;
+  gap: var(--gap-08);
+  align-items: flex-start;
+}
+
+
+.article__login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

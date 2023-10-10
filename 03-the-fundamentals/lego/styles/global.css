@@ -12,6 +12,15 @@
   src: url('LEGO Outlined.woff') format('woff');
 }
 
+:root {
+  --gap-05: 0.5rem;
+  --gap-08: 0.8rem;
+  --gap-2: 2rem;
+  --gap-5: 5rem;
+  --vintage-yellow: #F3C305;
+  --vintage-red: #CA1F08;
+}
+
 html,
 body {
   width: 100%;
@@ -26,6 +35,15 @@ body {
   font-family: LEGO;
 }
 
+a,
+a:hover,
+a:active,
+a:visited {
+  font-family: LEGO Outlined;
+  color: var(--vintage-red);
+  font-weight: bolder;
+}
+
 .header {
   height: fit-content;
   display: grid;
@@ -33,7 +51,7 @@ body {
   grid-template-rows: min-content;
   place-items: center;
   user-select: none;
-  font-family: LEGO Outlined;
+  /* font-family: LEGO Outlined; */
 }
 
 .header__logo {
@@ -48,12 +66,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem;
-  height: 6.875rem;
+  max-width: 8rem;
   animation: bounce 0.5s, heartBeat 1s 0.5s infinite;
   flex-direction: column;
   cursor: pointer;
   text-decoration: none;
+  gap: var(--gap-05);
+}
+
+.header__indicator img {
+  max-width: 4.875rem;
 }
 
 .header__menu {
@@ -85,6 +107,16 @@ body {
   rotate: 0deg;
 }
 
+.header:not(:has(.header__menu:checked)) {
+  margin-bottom: 1rem;
+}
+
+.header__menu:checked~.nav {
+  height: auto;
+  overflow: unset;
+  padding: 1rem 0;
+}
+
 .nav {
   width: 100%;
   display: grid;
@@ -94,16 +126,6 @@ body {
   grid-column: span 3;
   overflow: hidden;
   height: 0;
-}
-
-.header:not(:has(.header__menu:checked)) {
-  margin-bottom: 1rem;
-}
-
-.header__menu:checked~.nav {
-  height: auto;
-  overflow: unset;
-  padding: 1rem 0;
 }
 
 @media (min-width: 901px) {
@@ -168,133 +190,10 @@ body {
 .article__about-us,
 .article__news,
 .article__green {
-  left: 0;
-  display: none;
-  height: auto;
-  visibility: hidden;
+  display: flex;
   position: relative;
   flex-direction: column;
-}
-
-.article-show {
-  display: flex;
-  visibility: visible;
-  animation-duration: 0.8s;
-}
-
-.article__home {
-  animation-name: zoomIn;
-  gap: 0.8rem;
-}
-
-.article__home>p {
-  line-height: 1rem;
-}
-
-.article__surf-club {
-  animation-name: zoomInDown;
-  gap: 0.8rem;
-}
-
-.article__login {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.article__product {
-  animation-name: zoomInLeft;
-  gap: 0.8rem;
-}
-
-.article__product h2 {
-  text-align: center;
-}
-
-.article__production-line {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 3.74rem 2.5rem 1fr;
-  gap: 0.5rem;
-}
-
-.article__divider_product {
-  gap: 3rem;
-}
-
-.article__play {
-  animation-name: zoomInRight;
-  place-items: center;
-  gap: 0.8rem;
-}
-
-.article__game {
-  display: grid;
-  grid-template-columns: 14.25rem 14.25rem;
-}
-
-.article__game-header,
-.article__game-top,
-.article__game-play {
-  max-width: 28.5rem;
-  grid-column: span 2;
-}
-
-.article__game-yes,
-.article__game-no {
-  max-width: 14.25rem;
-  cursor: pointer;
-}
-
-.article__game-play {
-  cursor: pointer;
-}
-
-.article__worldwide {
-  animation-name: zoomInUp;
-  grid-area: 0.8rem;
-}
-
-.article__learn {
-  animation-name: slideInDown;
-
-}
-
-.article__learning-center {
-  display: grid;
-  gap: 0.8rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2.0625rem 1fr;
-  place-items: center;
-}
-
-.article__welcome-to-dacta {
-  grid-column: span 3;
-}
-
-.article__service {
-  animation-name: slideInLeft;
-}
-
-.article__customer-services {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 10.625rem 7.5rem;
-  place-items: center;
-  gap: 0.8rem;
-}
-
-.article__customer-services span {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-.article__about-us {
-  animation-name: slideInDown;
-  gap: 0.8rem;
 }
 
 .article__about-lego {
@@ -304,50 +203,21 @@ body {
   justify-content: space-between;
 }
 
-.article__news {
-  animation-name: slideInLeft;
-  gap: 0.8rem;
-}
-
-.article__news p {
-  display: flex;
-  max-width: 38rem;
-  align-items: center;
-  gap: 2rem;
-}
-
 .article__divider,
 .article__divider_product {
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
-.article__green {
-  animation-name: jackInTheBox;
-  gap: 0.8rem;
-}
-
-.article__green h1,
+/* .article__green h1,
 .article__product h1,
 .article__play h1,
 .article__worldwide h1,
 .article__service h1,
 .article__about-us h1 {
   text-align: center;
-}
-
-.article__green section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.article__ul {
-  margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+} */
 
 .footer {
   height: min-content;

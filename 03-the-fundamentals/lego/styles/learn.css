@@ -1,0 +1,20 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__learn {
+  animation: slideInDown 1s;
+
+}
+
+.article__learning-center {
+  display: grid;
+  gap: var(--gap-2);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2.0625rem 1fr;
+  place-items: center;
+  column-gap: var(--gap-5)
+}
+
+.article__welcome-to-dacta {
+  grid-column: span 3;
+}

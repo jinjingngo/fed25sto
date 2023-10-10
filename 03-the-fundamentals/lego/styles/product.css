@@ -1,0 +1,22 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__product {
+  animation: zoomInLeft 1s;
+  gap: var(--gap-08);
+}
+
+.article__product h2 {
+  text-align: center;
+}
+
+.article__production-line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 3.74rem 2.5rem 1fr;
+  gap: 0.5rem;
+}
+
+.article__divider_product {
+  gap: 3rem;
+}

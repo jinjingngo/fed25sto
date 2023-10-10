@@ -1,0 +1,7 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__about-us {
+  animation: slideInDown 1s;
+  gap: var(--gap-2)
+}

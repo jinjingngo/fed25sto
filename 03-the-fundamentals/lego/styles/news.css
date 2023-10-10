@@ -1,0 +1,15 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__news {
+  animation: slideInLeft 1s;
+  gap: var(--gap-08);
+  align-items: flex-start;
+}
+
+.article__news p {
+  display: flex;
+  max-width: 38rem;
+  align-items: center;
+  gap: 2rem;
+}

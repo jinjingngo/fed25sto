@@ -1,0 +1,26 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__green {
+  animation: jackInTheBox 1s;
+  gap: var(--gap-08);
+  align-items: flex-start;
+}
+
+
+.article__green section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-08);
+}
+
+.article__ul {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article__ul a {
+  font-family: LEGO;
+}

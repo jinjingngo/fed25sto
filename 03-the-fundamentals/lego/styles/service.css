@@ -1,0 +1,22 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__service {
+  animation: slideInLeft 1s;
+}
+
+.article__customer-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10.625rem 7.5rem;
+  place-items: center;
+  gap: var(--gap-08);
+}
+
+.article__customer-services span {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

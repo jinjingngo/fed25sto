@@ -1,0 +1,11 @@
+@import url(reset.css);
+@import url(global.css);
+
+.article__worldwide {
+  animation: zoomInUp 1s;
+  gap: var(--gap-2);
+}
+
+.article__worldwide img {
+  max-width: 28rem;
+}
