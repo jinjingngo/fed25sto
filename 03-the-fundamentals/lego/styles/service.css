@@ -3,12 +3,12 @@
 
 .article__service {
   animation: slideInLeft 1s;
+  gap: var(--gap-08);
 }
 
 .article__customer-services {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 10.625rem 7.5rem;
+  grid-template-columns: 1fr;
   place-items: center;
   gap: var(--gap-08);
 }
@@ -19,4 +19,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 36rem) {
+  .article__customer-services {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10.625rem 7.5rem;
+  }
 }
