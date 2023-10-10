@@ -294,6 +294,14 @@ body {
 
 .article__about-us {
   animation-name: slideInDown;
+  gap: 0.8rem;
+}
+
+.article__about-lego {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .article__news {
@@ -323,7 +331,8 @@ body {
 .article__product h1,
 .article__play h1,
 .article__worldwide h1,
-.article__service h1 {
+.article__service h1,
+.article__about-us h1 {
   text-align: center;
 }
 

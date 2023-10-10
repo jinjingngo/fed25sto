@@ -1,16 +1,3 @@
-// const tabLayout = {
-//   home: 'flex',
-//   'surf-club': 'flex',
-//   product: '',
-//   play: '',
-//   worldwide: '',
-//   learn: '',
-//   service: '',
-//   about: '',
-//   news: '',
-//   green: ''
-// }
-
 const lego1996 = (() => {
   const showClassName = 'article-show';
   const articles = document.querySelector('.article').children;
@@ -31,4 +18,4 @@ const lego1996 = (() => {
   return {toggleArticle};
 })();
 
-lego1996.toggleArticle('service')
+lego1996.toggleArticle('home')
