@@ -18,6 +18,7 @@
   --gap-2: 2rem;
   --gap-5: 5rem;
   --lego-blue: #0055BF;
+  --site-width: 45rem;
 }
 
 html,
@@ -32,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: LEGO;
+  align-items: center;
 }
 
 a,
@@ -50,7 +52,7 @@ a:visited {
   grid-template-rows: min-content;
   place-items: center;
   user-select: none;
-  /* font-family: LEGO Outlined; */
+  width: 100%;
 }
 
 .header__logo {
@@ -119,31 +121,24 @@ a:visited {
 .nav {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   place-items: center;
   grid-column: span 3;
   overflow: hidden;
   height: 0;
 }
 
-@media (min-width: 901px) {
-  .header__menu {
-    visibility: hidden;
-  }
-
-  .nav {
-    height: auto;
-    overflow: unset;
-  }
+@media (min-width: 62rem) {
+  /* TODO: re-layout ? */
 }
 
 .nav__brick-animation {
-  grid-column: span 3;
+  grid-column: span 2;
 }
 
 .nav__welcome {
-  grid-column: span 7;
+  grid-column: span 2;
   animation: bounceInDown 1s, headShake 1s 1s infinite;
 }
 
@@ -155,6 +150,11 @@ a:visited {
   animation: pulse 1s infinite;
 }
 
+.nav__abount-us {
+  grid-column: span 2;
+}
+
+.nav__abount-us,
 .nav__clickable {
   width: 5rem;
   height: 6.875rem;
@@ -173,10 +173,45 @@ a:visited {
   animation: bounce 0.8s infinite;
 }
 
+@media (min-width: 36rem) {
+  .header__menu {
+    visibility: hidden;
+  }
+
+  .nav {
+    height: auto;
+    overflow: unset;
+  }
+
+  .nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    grid-column: span 3;
+    overflow: hidden;
+  }
+
+  .nav__brick-animation {
+    grid-column: span 3;
+  }
+
+  .nav__welcome {
+    grid-column: span 7;
+  }
+
+  .nav__abount-us {
+    grid-column: span 1;
+  }
+
+}
+
 .article {
   flex: 1;
   display: grid;
-  padding: 0 4.5rem;
+  max-width: var(--site-width);
+  padding: 0 0.5rem;
 }
 
 .article__home,
@@ -195,12 +230,6 @@ a:visited {
   align-items: center;
 }
 
-.article__about-lego {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .article__divider,
 .article__divider_product {
@@ -209,28 +238,21 @@ a:visited {
   align-self: center;
 }
 
-/* .article__green h1,
-.article__product h1,
-.article__play h1,
-.article__worldwide h1,
-.article__service h1,
-.article__about-us h1 {
-  text-align: center;
-} */
-
 .footer {
   height: min-content;
   display: grid;
   gap: 0.5rem;
   padding: 1rem 0.5rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1.5rem 1fr;
+  grid-template-rows: min-content 1fr;
+  max-width: var(--site-width);
 }
 
 .footer__copyright {
   display: flex;
   justify-content: space-evenly;
   grid-column: span 2;
+  flex-direction: column;
 }
 
 .footer__go-to-top,
@@ -252,7 +274,7 @@ a:visited {
   font-weight: bolder;
 }
 
-@media (min-width: 901px) {
+@media(min-width:36rem) {
   .footer {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -262,7 +284,6 @@ a:visited {
     place-self: center;
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
     grid-column: unset;
     order: 2;
   }
@@ -274,5 +295,4 @@ a:visited {
   .footer__go-home {
     order: 3;
   }
-
 }

@@ -5,3 +5,20 @@
   animation: slideInDown 1s;
   gap: var(--gap-2)
 }
+
+.article__about-lego {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-2)
+}
+
+@media (min-width: 36rem) {
+  .article__about-lego {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-2)
+  }
+}

@@ -12,9 +12,16 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 2.0625rem 1fr;
   place-items: center;
-  column-gap: var(--gap-5)
+  column-gap: var(--gap-2)
 }
 
 .article__welcome-to-dacta {
   grid-column: span 3;
+}
+
+
+@media (min-width: 36rem) {
+  .article__learning-center {
+    column-gap: var(--gap-5)
+  }
 }
