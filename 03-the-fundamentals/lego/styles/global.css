@@ -176,13 +176,12 @@ body {
 }
 
 .article-show {
-  display: block;
+  display: flex;
   visibility: visible;
   animation-duration: 0.8s;
 }
 
 .article__home {
-  display: flex;
   animation-name: zoomIn;
   flex-direction: column;
   gap: 0.8rem;
@@ -222,12 +221,20 @@ body {
 
 .article__news {
   animation-name: slideInLeft;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.article__news p {
+  display: flex;
+  max-width: 38rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .article__green {
   animation-name: jackInTheBox;
 }
-
 
 .footer {
   height: min-content;

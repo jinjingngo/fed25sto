@@ -1,21 +1,34 @@
+// const tabLayout = {
+//   home: 'flex',
+//   'surf-club': 'flex',
+//   product: '',
+//   play: '',
+//   worldwide: '',
+//   learn: '',
+//   service: '',
+//   about: '',
+//   news: '',
+//   green: ''
+// }
+
 const lego1996 = (() => {
   const showClassName = 'article-show';
-  const tabs = document.querySelector('.article').children;
-  let previousTab = null;
+  const articles = document.querySelector('.article').children;
+  let previousArticle = null;
 
-  const toggleTab = (tabName) => {
-    if (!tabName || !tabs[tabName]) return false;
-    if (previousTab && previousTab.id === tabName) return true;
+  const toggleArticle = (articleName) => {
+    if (!articleName || !articles[articleName]) return false;
+    if (previousArticle && previousArticle.id === articleName) return true;
 
-    if (previousTab) {
-      previousTab?.classList.remove(showClassName);
+    if (previousArticle) {
+      previousArticle?.classList.remove(showClassName);
     }
 
-    tabs[tabName].classList.add(showClassName);
-    previousTab = tabs[tabName];
+    articles[articleName].classList.add(showClassName);
+    previousArticle = articles[articleName];
   };
 
-  return {toggleTab};
+  return {toggleArticle};
 })();
 
-lego1996.toggleTab('home')
+lego1996.toggleArticle('green')
