@@ -9,7 +9,6 @@
 .article__about-lego {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
   gap: var(--gap-2)

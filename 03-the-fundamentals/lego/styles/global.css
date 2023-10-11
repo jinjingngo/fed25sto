@@ -129,10 +129,6 @@ a:visited {
   height: 0;
 }
 
-@media (min-width: 62rem) {
-  /* TODO: re-layout ? */
-}
-
 .nav__brick-animation {
   grid-column: span 2;
 }
@@ -150,11 +146,11 @@ a:visited {
   animation: pulse 1s infinite;
 }
 
-.nav__abount-us {
+.nav__about-us {
   grid-column: span 2;
 }
 
-.nav__abount-us,
+.nav__about-us,
 .nav__clickable {
   width: 5rem;
   height: 6.875rem;
@@ -201,7 +197,7 @@ a:visited {
     grid-column: span 7;
   }
 
-  .nav__abount-us {
+  .nav__about-us {
     grid-column: span 1;
   }
 

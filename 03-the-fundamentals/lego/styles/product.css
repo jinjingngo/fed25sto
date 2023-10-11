@@ -26,6 +26,13 @@
   gap: var(--gap-05);
 }
 
+.article__fraction {
+  font-family: monospace, system-ui;
+  font-style: italic;
+  font-weight: bolder;
+  margin-left: 0.2rem;
+}
+
 .article__production-line img {
   max-width: 8rem;
   margin: 0 auto;
