@@ -125,7 +125,6 @@ a:visited {
   grid-template-rows: repeat(8, 1fr);
   place-items: center;
   grid-column: span 3;
-  overflow: hidden;
   height: 0;
 }
 
@@ -186,7 +185,6 @@ a:visited {
     grid-template-rows: repeat(3, 1fr);
     place-items: center;
     grid-column: span 3;
-    overflow: hidden;
   }
 
   .nav__brick-animation {
