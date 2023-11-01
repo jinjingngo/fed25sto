@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+.article,
+.article__header {
+  width: 100svw;
+  height: 100svh;
+}
+
+.article__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
