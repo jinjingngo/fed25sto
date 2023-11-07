@@ -4,7 +4,7 @@ const ballClient = ballEl.getBoundingClientRect();
 const width = ballClient.width;
 const height = ballClient.height;
 
-document.body.addEventListener('click', function(e) {
+document.addEventListener('click', function(e) {
   const x = e.clientX;
   const y = e.clientY;
 
