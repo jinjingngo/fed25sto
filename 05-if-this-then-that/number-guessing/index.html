@@ -3,15 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik+Iso&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./index.css" />
     <title>Number Guessing Game</title>
   </head>
   <body>
-    <article class="article">
-      <header class="article__header">
-        <h1>Number Guessing Game</h1>
-      </header>
-    </article>
+    <header class="header">GUESSING THE RANDOM NUMBER</header>
+    <section class="boundary" id="boundary">
+      <span class="boundary__title">RANDOM NUMBER</span>
+      <button
+        class="boundary__toggle"
+        id="boundary__toggle"
+        title="Click me to toggle the boundary"
+      >
+        X
+      </button>
+      <form class="boundary__form" id="boundary--form">
+        <label class="boundary__label" for="boundary-lower">
+          LOWER
+          <input
+            required
+            type="number"
+            min="1"
+            id="boundary-lower"
+            name="lower"
+            class="boundary__lower"
+          />
+        </label>
+        <span class="boundary__till">--</span>
+        <label class="boundary__label" for="boundary-upper">
+          UPPER
+          <input
+            required
+            type="number"
+            min="1"
+            id="boundary-upper"
+            name="upper"
+            class="boundary__upper"
+          />
+        </label>
+        <button
+          id="boundary--generate"
+          class="boundary__generate"
+          type="submit"
+          title="Once you hit me, provide valid Lower and Upper a new round will begin!"
+        >
+          RE/GENERATE
+        </button>
+      </form>
+    </section>
+    <section class="guess">
+      <header class="guess__title">LET'S GUESS</header>
+      <div class="guess__panel">
+        <div class="guess__number">
+          <span>Your number: </span>
+          <input type="number" class="guess__number-input" id="guess__number" />
+          <button
+            type="button"
+            class="guess__number-btn"
+            id="guess__number-btn"
+          >
+            I guess
+          </button>
+        </div>
+        <div class="guess__result animate__animated" id="guess__result"></div>
+        <div class="guess__setup">
+          <div class="guess__max-times">
+            <div class="guess__max-times-prefix">You has max&nbsp;</div>
+            <div class="guess__max-times-number" id="guess__max-times-number">
+              0
+            </div>
+            <div class="guess__max-times-surfix">&nbsp;times</div>
+          </div>
+          <div class="guess__left-times">
+            <div class="guess__left-times-prefix">You left&nbsp;</div>
+            <div class="guess__left-times-number" id="guess__left-times-number">
+              0
+            </div>
+            <div class="guess__left-times-surfix">&nbsp;times</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
