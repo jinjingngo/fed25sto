@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: bisque;
+}
+
+.to-fox {
+  width: 80%;
+
+  .random-fox {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .random-fox:hover {
+    box-shadow: 0.3rem 0.3rem rgba(250, 126, 112, .3);
+  }
+}
