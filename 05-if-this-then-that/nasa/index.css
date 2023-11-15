@@ -49,17 +49,18 @@ body {
   text-align: center;
 }
 
-.gallery__card:hover {
-  background-color: #C71585;
-}
-
 .gallery__picture,
 .gallery__video {
   max-width: 100%;
 }
 
-.gallery__video {
+.gallery__card:has(.gallery__video) {
   background-color: #FFA07A;
+}
+
+.gallery__card:hover,
+.gallery__card:has(.gallery__video):hover {
+  background-color: #C71585;
 }
 
 .refresh {
