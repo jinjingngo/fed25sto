@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100svw;
+  height: 100svh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  background-color: yellowgreen;
+}
+
+.counter {
+  padding: 1rem;
+  max-width: 32rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  background-color: salmon;
+  border-radius: 4%;
+}
+
+.counter__value {
+  padding: 1rem;
+  color: yellow;
+  font-size: larger;
+  grid-column: span 2;
+}
+
+.counter__button {
+  padding: 0.5rem 1rem;
+}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100svw;
+  height: 100svh;
+}
+
+body {
+  font-family: 'Nova Square', sans-serif;
+  color: #FFFFFF;
+  background-color: #0B3D91;
+}
+
+.gallery {
+  max-width: 80%;
+  height: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery__header {
+  grid-column: span 2;
+  font-size: 3rem;
+}
+
+.gallery__card {
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #6A5ACD;
+  border-color: #C0C0C0;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery__card:hover {
+  background-color: #C71585;
+}
+
+.gallery__picture,
+.gallery__video {
+  max-width: 100%;
+}
+
+.gallery__video {
+  background-color: #FFA07A;
+}
+
+.refresh {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  font-size: 5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.refresh:hover {
+  rotate: 180deg;
+}
+
+@media (min-width: 50rem) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery__header {
+    grid-column: span 3;
+  }
+}
