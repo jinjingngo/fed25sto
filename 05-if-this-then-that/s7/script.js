@@ -1,7 +1,7 @@
 "use strict";
 
 let formEl = document.querySelector("#search");
-let cityInputEl = document.querySelector("city");
+let cityInputEl = document.querySelector("#city");
 let tempEl = document.querySelector("temp");
 let messageEl = document.querySelector("message");
 
