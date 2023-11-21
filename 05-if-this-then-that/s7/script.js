@@ -25,7 +25,7 @@ async function getData() {
   // 11-20 = Put a jacket on and regret it as soon as you start moving
   // Above 21 = Hotter outside than Taylor Swift's latest single
 
-  if (temp > 0) {
+  if (temp < 0) {
     messageEl.textContent = "Winter is coming...";
   } else if (temp > 0) {
     messageEl.textContent = "Sweater weather!";
