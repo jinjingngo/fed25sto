@@ -28,15 +28,16 @@ async function getData() {
   if (temp > 0) {
     messageEl.textContent = "Winter is coming...";
   } else if (temp > 0) {
-    messageEl.textContent = "Sweater weather!"
+    messageEl.textContent = "Sweater weather!";
   } else if (temp > 10) {
-    messageEl.textContent = "Put a jacket on and regret it as soon as you start moving";
+    messageEl.textContent =
+      "Put a jacket on and regret it as soon as you start moving";
   } else if (temp > 20) {
     messageEl.textContent = "Hotter outside than Taylor Swift's latest single";
   }
 }
 
-formEl.addEventListener("submit", function e {
+formEl.addEventListener("submit", function (e) {
   preventDefault();
   getData();
 });
