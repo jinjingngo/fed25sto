@@ -16,7 +16,7 @@ async function getData() {
   // https://www.rapidtables.com/convert/temperature/kelvin-to-celsius.html
   let temp = data.temp - 273.15;
 
-  tempEl.textContent = "${temp}°C";
+  tempEl.textContent = `${temp}°C`;
 
   // Different temperature ranges should print different messages:
   //
