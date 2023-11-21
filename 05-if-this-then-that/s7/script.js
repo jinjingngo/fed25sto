@@ -38,6 +38,6 @@ async function getData() {
 }
 
 formEl.addEventListener("submit", function (e) {
-  preventDefault();
+  e.preventDefault();
   getData();
 });
