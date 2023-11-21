@@ -3,7 +3,7 @@
 let formEl = document.querySelector("#search");
 let cityInputEl = document.querySelector("#city");
 let tempEl = document.querySelector("#temp");
-let messageEl = document.querySelector("message");
+let messageEl = document.querySelector("#message");
 
 async function getData() {
   // Fetch data from Open Weather Map API, passing the input value as city
