@@ -1,11 +1,12 @@
+let counterValue = 0;
+
 const counterEl = document.querySelector("#counter");
 const resetEl = document.querySelector("#reset");
 const incrementEl = document.querySelector("#increment");
 const decrementEl = document.querySelector("#decrement");
-let counterValue = 0;
 
-const renderCounterValue = (counterValue) => {
-  counterEl.innerHTML = counterValue;
+const renderCounterValue = (value) => {
+  counterEl.innerHTML = value;
 };
 
 renderCounterValue(counterValue);
@@ -17,12 +18,12 @@ const handleAction = (action) => {
       break;
     case "increment":
       if (counterValue < 10) {
-        counterValue = counterValue + 1;
+        counterValue += 1;
       }
       break;
     case "decrement":
       if (counterValue > 0) {
-        counterValue = counterValue - 1;
+        counterValue -= 1;
       }
       break;
     default:
