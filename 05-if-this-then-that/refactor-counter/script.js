@@ -1,8 +1,11 @@
-const counter = document.querySelector("#counter");
+const counterEl = document.querySelector("#counter");
+const resetEl = document.querySelector("#reset");
+const incrementEl = document.querySelector("#increment");
+const decrementEl = document.querySelector("#decrement");
 let counterValue = 0;
 
 const renderCounterValue = (counterValue) => {
-  counter.innerHTML = counterValue;
+  counterEl.innerHTML = counterValue;
 };
 
 renderCounterValue(counterValue);
@@ -28,14 +31,14 @@ const handleAction = (action) => {
   renderCounterValue(counterValue);
 };
 
-document.querySelector("#reset").addEventListener("click", function () {
+resetEl.addEventListener("click", function () {
   handleAction("reset");
 });
 
-document.getElementById("increment").addEventListener("click", function () {
+incrementEl.addEventListener("click", function () {
   handleAction("increment");
 });
 
-document.getElementById("decrement").addEventListener("click", function () {
+decrementEl.addEventListener("click", function () {
   handleAction("decrement");
 });
