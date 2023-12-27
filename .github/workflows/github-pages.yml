@@ -68,20 +68,19 @@ jobs:
               # Build the project - assumes a script named 'build' is present in package.json
               pnpm run build
 
-              # Create a directory for the project's build artifacts in the root
+              # Move build artifacts to a directory named after the project in the root
               # This assumes your build artifacts are in the 'dist' directory
-              mkdir -p ../../${project%/}
-
-              # Move build artifacts to the dedicated directory
-              mv dist/* ../../${project%/}
+              mv dist ../../${project%/}
 
               # Navigate back to the 06-reactor directory
               cd ..
 
-              # Remove the project source code to minimize artifacts, excluding the artifact directory
-              find $project -mindepth 1 -not -name "${project%/}" -exec rm -rf {} +
+              # Now that artifacts are moved, delete all other files and directories
+              rm -rf ${project}
             fi
           done
+
+          # The build artifacts are now in the root directory, organized by project names
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
