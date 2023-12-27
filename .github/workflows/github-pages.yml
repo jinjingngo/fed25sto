@@ -54,6 +54,9 @@ jobs:
           # Navigate into the 06-reactor directory
           cd 06-reactor
 
+          # Create a directory for build artifacts
+          mkdir -p build-artifacts
+
           # Loop through each project directory and build the project
           for project in */ ; do
             # Only consider directories
@@ -67,17 +70,19 @@ jobs:
               # Build the project - assumes a script named 'build' is present in package.json
               pnpm run build
 
-              # If build artifacts are in a dist/ folder, move them to a folder named after the project
-              # to prevent collisions between projects in the artifact upload
+              # Move build artifacts to a separate directory
               mkdir -p ../build-artifacts/${project%/}
               mv dist/* ../build-artifacts/${project%/}
 
               # Navigate back to the 06-reactor directory
               cd ..
+
+              # Remove the project source code to minimize artifacts
+              rm -rf $project
             fi
           done
 
-          # After building all projects, move the build artifacts to the root
+          # Move the build artifacts to the root
           # so they are available for the artifact upload
           mv build-artifacts/* ../
 
