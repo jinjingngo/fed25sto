@@ -1,0 +1,103 @@
+:root {
+  --square-size: 2.125rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.board {
+  display: grid;
+  grid-template: repeat(3, var(--square-size)) / repeat(3, var(--square-size));
+}
+
+.board__square {
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: var(--square-size);
+  height: var(--square-size);
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: var(--square-size);
+}
+
+/* Remove the right border of squares that are not in the last column */
+.board__square:not(:nth-child(3n)) {
+  border-right: none;
+}
+
+/* Remove the bottom border of squares that are not in the last row */
+.board__square:not(:nth-last-child(-n+3)) {
+  border-bottom: none;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
