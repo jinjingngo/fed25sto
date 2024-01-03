@@ -1,11 +1,5 @@
-import Board from "./Board";
+import Game from "./Game";
 
-const App = () => {
-  return (
-    <>
-      <Board></Board>
-    </>
-  );
-};
+const App = () => <Game />;
 
 export default App;

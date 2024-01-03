@@ -15,18 +15,20 @@ const Square = ({ value, onSquareClick }: SquareProps) => {
   );
 };
 
-const Board = () => {
-  const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setSquares] = useState<TicTacToe[]>(Array(9).fill(null));
+interface BoardProps {
+  xIsNext: boolean;
+  squares: TicTacToe[];
+  onPlay: (squares: TicTacToe[]) => void;
+}
 
+const Board = ({ xIsNext, squares, onPlay }: BoardProps) => {
   const handleClick = (index: number) => {
     if (squares[index] || calculateWinner(squares)) return;
 
     const nextSquares = squares.slice();
     nextSquares[index] = xIsNext ? "X" : "O";
 
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   };
 
   const winner = calculateWinner(squares);
@@ -70,4 +72,26 @@ const calculateWinner = (squares: TicTacToe[]): TicTacToe => {
   return null;
 };
 
-export default Board;
+const Game = () => {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState<TicTacToe[][]>([Array(9).fill(null)]);
+  const currentSquares = history[history.length - 1];
+
+  const handlePlay = (nextSquares: TicTacToe[]) => {
+    setHistory([...history, nextSquares]);
+    setXIsNext(!xIsNext);
+  };
+
+  return (
+    <div className="game">
+      <div className="game__board">
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      </div>
+      <div className="game__info">
+        <ol>{}</ol>
+      </div>
+    </div>
+  );
+};
+
+export default Game;
