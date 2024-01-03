@@ -73,14 +73,29 @@ const calculateWinner = (squares: TicTacToe[]): TicTacToe => {
 };
 
 const Game = () => {
-  const [xIsNext, setXIsNext] = useState(true);
   const [history, setHistory] = useState<TicTacToe[][]>([Array(9).fill(null)]);
-  const currentSquares = history[history.length - 1];
+  const [currentMove, setCurrentMove] = useState(0);
+  const xIsNext = currentMove % 2;
+  const currentSquares = history[currentMove];
 
   const handlePlay = (nextSquares: TicTacToe[]) => {
-    setHistory([...history, nextSquares]);
-    setXIsNext(!xIsNext);
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
   };
+
+  const jumpTo = (nextMove: number) => {
+    setCurrentMove(nextMove);
+  };
+
+  const moves = history.map((_, move) => {
+    const description = move > 0 ? `Go to move #${move}` : `Go to game start`;
+    return (
+      <li key={move}>
+        <button onClick={() => jumpTo(move)}>{description}</button>
+      </li>
+    );
+  });
 
   return (
     <div className="game">
@@ -88,7 +103,7 @@ const Game = () => {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game__info">
-        <ol>{}</ol>
+        <ol>{moves}</ol>
       </div>
     </div>
   );
