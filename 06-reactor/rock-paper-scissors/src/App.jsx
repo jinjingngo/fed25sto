@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import "./App.css";
 
 import Player from "./components/Player";
@@ -24,29 +24,12 @@ const randomChoice = () => CHOICES[Math.floor(Math.random() * CHOICES.length)];
 function App() {
   const [playerChoice, setPlayerChoice] = useState({});
   const [computerChoice, setComputerChoice] = useState({});
-  const [matchResult, setMatchResult] = useState("TIE");
+  const [playerResult, setPlayerResult] = useState("TIE");
+  const [computerResult, setComputerResult] = useState("TIE");
 
   const playerChoseHandler = (index) => {
     setPlayerChoice(CHOICES[index]);
     setComputerChoice(randomChoice());
-    setMatchResultUnion();
-  };
-
-  const setMatchResultUnion = () => {
-    if (playerChoice.name === computerChoice.name) {
-      setMatchResult("TIE");
-      return;
-    }
-
-    if (isPlayerWinner) {
-      setMatchResult("PLAYER_WON");
-      return;
-    }
-
-    if (isPlayerWinner) {
-      setMatchResult("PLAYER_LOST");
-      return;
-    }
   };
 
   const isPlayerWinner = useCallback(() => {
@@ -68,10 +51,37 @@ function App() {
       : "You LOST";
   }, [playerChoice, computerChoice, isPlayerWinner]);
 
+  useEffect(() => {
+    if (playerChoice.name === computerChoice.name) {
+      setPlayerResult("TIE");
+      setComputerResult("TIE");
+    } else if (isPlayerWinner()) {
+      setPlayerResult("WON");
+      setComputerResult("LOST");
+    } else {
+      setPlayerResult("LOST");
+      setComputerResult("WON");
+    }
+  }, [
+    playerChoice,
+    computerChoice,
+    setPlayerResult,
+    setComputerResult,
+    isPlayerWinner,
+  ]);
+
   return (
     <div className="rock-paper-scissors">
-      <Player win={matchResult} name={"Anti-Computer"} choice={playerChoice} />
-      <Player win={matchResult} name={"Computer"} choice={computerChoice} />
+      <Player
+        result={playerResult}
+        name={"Anti-Computer"}
+        choice={playerChoice}
+      />
+      <Player
+        result={computerResult}
+        name={"Computer"}
+        choice={computerChoice}
+      />
 
       <span className="result">{showMatchResult()}</span>
 
