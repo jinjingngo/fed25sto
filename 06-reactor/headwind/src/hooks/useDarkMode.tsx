@@ -28,10 +28,10 @@ function useLocalStorage<T>(
   return [storedValue, setValue];
 }
 
-function useDarkMode(): [
+const useDarkMode = (): [
   boolean,
   (value: boolean | ((val: boolean) => boolean)) => void
-] {
+] => {
   const [enabled, setEnabled] = useLocalStorage<boolean>("dark-theme", false);
   const isEnabled = typeof enabled === "undefined" ? false : enabled;
 
@@ -43,6 +43,6 @@ function useDarkMode(): [
   }, [isEnabled]);
 
   return [enabled, setEnabled];
-}
+};
 
 export default useDarkMode;
