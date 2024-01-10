@@ -8,7 +8,7 @@ import CogIcon from "./assets/cog.svg?react";
 import ChevronIcon from "./assets/chevron.svg?react";
 import ArrowIcon from "./assets/arrow.svg?react";
 import BoltIcon from "./assets/bolt.svg?react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
 const App = () => {
@@ -64,16 +64,9 @@ const DropdownMenu = () => {
   const [menuHeight, setMenuHeight] = useState<number>(0);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const firstElementChild = dropdownRef.current?.firstChild as HTMLElement;
-    if (firstElementChild) {
-      setMenuHeight(firstElementChild.offsetHeight);
-    }
-  }, []);
-
-  const calcHeight = (el: HTMLElement) => {
-    const height = el.offsetHeight;
-    setMenuHeight(height);
+  const calcHeight = () => {
+    const height = dropdownRef.current?.offsetHeight;
+    setMenuHeight(height ?? 0);
   };
 
   const DropdownItem = ({
@@ -96,15 +89,17 @@ const DropdownMenu = () => {
   };
 
   return (
-    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+    <div className="dropdown" style={{ height: menuHeight }}>
       <CSSTransition
+        appear={true}
         in={activeMenu === "main"}
         timeout={500}
         classNames="menu-primary"
         unmountOnExit
         onEnter={calcHeight}
+        nodeRef={dropdownRef}
       >
-        <div className="menu">
+        <div className="menu" ref={dropdownRef}>
           <DropdownItem>My Profile</DropdownItem>
           <DropdownItem
             leftIcon={<CogIcon />}
@@ -128,8 +123,10 @@ const DropdownMenu = () => {
         unmountOnExit
         timeout={500}
         classNames="menu-secondary"
+        onEnter={calcHeight}
+        nodeRef={dropdownRef}
       >
-        <div className="menu">
+        <div className="menu" ref={dropdownRef}>
           <DropdownItem leftIcon={<ArrowIcon />} goToMenu="main"></DropdownItem>
           <DropdownItem leftIcon={<BoltIcon />}>HTML</DropdownItem>
           <DropdownItem leftIcon={<BoltIcon />}>CSS</DropdownItem>
@@ -144,8 +141,9 @@ const DropdownMenu = () => {
         classNames="menu-secondary"
         unmountOnExit
         onEnter={calcHeight}
+        nodeRef={dropdownRef}
       >
-        <div className="menu">
+        <div className="menu" ref={dropdownRef}>
           <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
             <h2>Animals</h2>
           </DropdownItem>
