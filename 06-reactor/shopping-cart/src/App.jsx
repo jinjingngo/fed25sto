@@ -4,6 +4,7 @@ import Root from "./pages/Root";
 import Shop from "./pages/Shop";
 import ItemPage from "./pages/ItemPage";
 import { BASENAME } from "./context";
+import Basket from "./pages/Basket";
 
 function App() {
   const [cart, setCart] = useState({});
@@ -54,6 +55,16 @@ function App() {
             path="/product/:id"
             element={
               <ItemPage
+                cart={cart}
+                handleAddToCart={handleAddToCart}
+                handleRemoveFromCart={handleRemoveFromCart}
+              />
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <Basket
                 cart={cart}
                 handleAddToCart={handleAddToCart}
                 handleRemoveFromCart={handleRemoveFromCart}
