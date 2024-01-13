@@ -8,7 +8,8 @@ import { BASENAME } from "./context";
 function App() {
   const [cartItems, setCartItems] = useState(0);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (e) => {
+    e.preventDefault();
     setCartItems(cartItems + 1);
   };
 
