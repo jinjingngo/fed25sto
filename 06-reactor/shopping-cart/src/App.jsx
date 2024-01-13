@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Shop from "./pages/Shop";
 import ItemPage from "./pages/ItemPage";
+import { BASENAME } from "./context";
 
 function App() {
   const [cartItems, setCartItems] = useState(0);
@@ -11,16 +12,16 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={BASENAME}>
       <Routes>
         <Route
-          path=""
+          path="/"
           element={
             <Shop cartItems={cartItems} handleAddToCart={handleAddToCart} />
           }
         />
         <Route
-          path="product/:id"
+          path="/product/:id"
           element={<ItemPage handleAddToCart={handleAddToCart} />}
         />
       </Routes>
