@@ -9,7 +9,7 @@ const ItemPage = ({ handleAddToCart }) => {
   if (!item) return <div>Item not found</div>;
   return (
     <div style={{ display: "flex" }}>
-      <Product {...item} onAdd={handleAddToCart} />
+      <Product product={item} onAdd={handleAddToCart} />
       <div style={{ marginTop: "10em" }}>{item.description}</div>
     </div>
   );

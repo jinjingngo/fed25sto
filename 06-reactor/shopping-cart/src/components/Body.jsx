@@ -7,7 +7,7 @@ const Body = ({ onAdd }) => {
     <div style={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
       {products.map((product) => (
         <Link key={product.id} to={`./product/${product.id}`}>
-          <Product {...product} onAdd={onAdd} />
+          <Product product={product} onAdd={onAdd} />
         </Link>
       ))}
     </div>

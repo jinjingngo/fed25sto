@@ -6,11 +6,11 @@ import ItemPage from "./pages/ItemPage";
 import { BASENAME } from "./context";
 
 function App() {
-  const [cartItems, setCartItems] = useState(0);
+  const [cartItems, setCartItems] = useState({});
 
-  const handleAddToCart = (e) => {
-    e.preventDefault();
-    setCartItems(cartItems + 1);
+  const handleAddToCart = (id) => {
+    const quantity = cartItems[id] ? cartItems[id] + 1 : 1;
+    setCartItems({ ...cartItems, [id]: quantity });
   };
 
   return (
