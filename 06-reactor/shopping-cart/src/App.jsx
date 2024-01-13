@@ -14,13 +14,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path=""
           element={
             <Shop cartItems={cartItems} handleAddToCart={handleAddToCart} />
           }
         />
         <Route
-          path="/product/:id"
+          path="product/:id"
           element={<ItemPage handleAddToCart={handleAddToCart} />}
         />
       </Routes>
