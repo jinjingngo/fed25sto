@@ -45,3 +45,9 @@ export const products = [
 
 export const getProduct = (id) =>
   products.find((product) => product.id === Number(id));
+
+export const getInCartProducts = (cart = {}) =>
+  products.reduce((previous, product) => {
+    if (!cart[product.id]) return previous;
+    return [...previous, { ...product, quantity: cart[product.id] }];
+  }, []);

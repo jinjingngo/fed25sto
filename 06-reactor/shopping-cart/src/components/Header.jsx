@@ -1,15 +1,16 @@
+import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Cart from "./Cart";
 
+const hideCartPath = ["/cart"];
+
 const Header = ({ cart = {} }) => {
-  const [count, setCount] = useState(0);
+  const [showCart, setShowCart] = useState(true);
+  const { pathname } = useLocation();
+
   useEffect(() => {
-    const count = Object.values(cart).reduce(
-      (accumulator, quantity) => accumulator + quantity,
-      0
-    );
-    setCount(count);
-  }, [cart]);
+    setShowCart(hideCartPath.includes(pathname) ? false : true);
+  }, [pathname]);
   return (
     <div
       style={{
@@ -22,7 +23,7 @@ const Header = ({ cart = {} }) => {
       }}
     >
       <div>My Shop</div>
-      <Cart numItems={count} />
+      {showCart && <Cart cart={cart} />}
     </div>
   );
 };

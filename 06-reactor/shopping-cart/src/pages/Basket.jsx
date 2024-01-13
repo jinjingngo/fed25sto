@@ -1,10 +1,8 @@
-import { products } from "../data";
+import { getInCartProducts } from "../data";
 import Product from "../components/Product";
+
 const Basket = ({ cart = {}, handleAddToCart, handleRemoveFromCart }) => {
-  const inCartProducts = products.reduce((previous, product) => {
-    if (!cart[product.id]) return previous;
-    return [...previous, { ...product, quantity: cart[product.id] }];
-  }, []);
+  const inCartProducts = getInCartProducts(cart);
 
   return (
     <div style={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
