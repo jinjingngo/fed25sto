@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import Cart from "./Cart";
 
-const Header = ({ cartItems = {} }) => {
+const Header = ({ cart = {} }) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    const count = Object.values(cartItems).reduce(
+    const count = Object.values(cart).reduce(
       (accumulator, quantity) => accumulator + quantity,
       0
     );
     setCount(count);
-  }, [cartItems]);
+  }, [cart]);
   return (
     <div
       style={{

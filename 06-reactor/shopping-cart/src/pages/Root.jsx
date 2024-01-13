@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 
-const Root = ({ cartItems }) => {
+const Root = ({ cart }) => {
   return (
     <>
-      <Header cartItems={cartItems} />
+      <Header cart={cart} />
       <Outlet />
     </>
   );
