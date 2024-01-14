@@ -60,11 +60,12 @@ ul {
   padding: 1rem;
   top: 3.625rem;
   width: 18.75rem;
+  max-height: 23.125rem;
   transform: translateX(-60%);
   background-color: #fff;
   border: 1px solid salmon;
   border-radius: 0.5rem;
-
+  overflow-y: auto;
 }
 
 .cart__popover,
