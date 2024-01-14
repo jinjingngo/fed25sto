@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Cart from "./Cart";
 
@@ -12,17 +12,8 @@ const Header = ({ cart = {} }) => {
     setShowCart(hideCartPath.includes(pathname) ? false : true);
   }, [pathname]);
   return (
-    <div
-      style={{
-        backgroundColor: "#282c36",
-        minHeight: "60px",
-        padding: "10px 10px 0 10px",
-        display: "flex",
-        fontSize: "2em",
-        color: "white",
-      }}
-    >
-      <div>My Shop</div>
+    <div className="header">
+      <Link to="./">Duck Shop</Link>
       {showCart && <Cart cart={cart} />}
     </div>
   );

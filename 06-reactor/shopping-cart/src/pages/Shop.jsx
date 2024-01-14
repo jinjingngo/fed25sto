@@ -1,3 +1,4 @@
+import "./shop.css";
 import Body from "../components/Body";
 
 const Shop = ({ cart, handleAddToCart, handleRemoveFromCart }) => {

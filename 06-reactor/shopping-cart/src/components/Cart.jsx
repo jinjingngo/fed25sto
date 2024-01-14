@@ -1,3 +1,5 @@
+import "./cart.css";
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getInCartProducts } from "../data";
@@ -18,7 +20,7 @@ const Cart = ({ cart = {} }) => {
   }, [cart]);
 
   return (
-    <div style={{ cursor: "pointer", marginLeft: "auto" }}>
+    <div className="cart">
       <div
         onClick={(e) => {
           e.preventDefault();
@@ -29,35 +31,29 @@ const Cart = ({ cart = {} }) => {
         Cart ({count})
       </div>
       {showCartList && (
-        <div
-          style={{
-            position: "absolute",
-            top: "58px",
-            width: "300px",
-            transform: "translateX(-45%)",
-            backgroundColor: "salmon",
-            padding: "1rem",
-          }}
-        >
-          <ul>
+        <div className="cart__popover">
+          <ul className="cart__list">
             {inCartProducts.map(({ name, price, image, id, quantity }) => {
               return (
-                <li key={id} style={{}}>
+                <li className="cart__item" key={id}>
                   <img
-                    width={200}
-                    height={200}
+                    className="cart__image"
                     src={`${BASENAME}${image}`}
                     alt={name}
                   />
-                  <p>
+                  <p className="cart__name_price">
                     {name} - {price} SEK
                   </p>
-                  {quantity && <p>Quantity: {quantity}</p>}
+                  {quantity && (
+                    <p className="cart__quantity">Quantity: {quantity}</p>
+                  )}
                 </li>
               );
             })}
           </ul>
-          <Link to="./cart">Go to cart</Link>
+          <Link className="goto_basket" to="./cart">
+            Go to cart
+          </Link>
         </div>
       )}
     </div>

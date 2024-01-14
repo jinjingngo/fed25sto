@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Root from "./pages/Root";
 import Shop from "./pages/Shop";
-import ItemPage from "./pages/ItemPage";
+import ProductDetail from "./pages/ProductDetail";
 import { BASENAME } from "./context";
 import Basket from "./pages/Basket";
 
@@ -54,7 +54,7 @@ function App() {
           <Route
             path="/product/:id"
             element={
-              <ItemPage
+              <ProductDetail
                 cart={cart}
                 handleAddToCart={handleAddToCart}
                 handleRemoveFromCart={handleRemoveFromCart}

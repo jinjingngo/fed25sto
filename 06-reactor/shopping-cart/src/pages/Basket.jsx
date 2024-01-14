@@ -1,3 +1,4 @@
+import "./basket.css";
 import { getInCartProducts } from "../data";
 import Product from "../components/Product";
 
@@ -5,7 +6,7 @@ const Basket = ({ cart = {}, handleAddToCart, handleRemoveFromCart }) => {
   const inCartProducts = getInCartProducts(cart);
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
+    <div className="basket">
       {inCartProducts.map((product) => (
         <Product
           key={product.id}

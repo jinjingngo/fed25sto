@@ -1,0 +1,44 @@
+.basket {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 1rem;
+  padding: 2rem 0;
+}
+
+.basket a {
+  text-decoration: none;
+}
+
+.product {
+  max-width: 12.5rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 2rem;
+  padding: 0.5rem 0;
+  border: 1px solid salmon;
+  cursor: pointer;
+}
+
+.product:hover {
+  box-shadow: 0.375rem 0.375rem 0.375rem salmon;
+}
+
+.product__image {
+  max-width: 80%;
+}
+
+.product__name_price {
+  color: #000;
+}
+
+.product__quantity {}
+
+.product__add_to_cart {}
+
+.product__remove_from_cart {}

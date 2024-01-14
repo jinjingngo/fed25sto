@@ -4,7 +4,7 @@ import Product from "./Product";
 
 const Body = ({ cart, onAdd, onRemove }) => {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
+    <div className="shop">
       {products.map((product) => (
         <Link key={product.id} to={`./product/${product.id}`}>
           <Product

@@ -12,15 +12,25 @@ const Product = ({ product, cart = {}, onAdd, onRemove }) => {
   };
 
   return (
-    <div style={{ padding: "2em" }}>
-      <img width={200} height={200} src={`${BASENAME}${image}`} alt={name} />
-      <p>
+    <div className="product">
+      <img className="product__image" src={`${BASENAME}${image}`} alt={name} />
+      <p className="product__name_price">
         {name} - {price} SEK
       </p>
-      {quantity && <p>Quantity: {quantity}</p>}
-      <button onClick={onAddHandler}>+ Add to Cart</button>
+      {quantity && <p className="product__quantity">Quantity: {quantity}</p>}
+      <button
+        className="product__button product__add_to_cart"
+        onClick={onAddHandler}
+      >
+        + Add to Cart
+      </button>
       {cart[id] && (
-        <button onClick={onRemoveHandler}>- Remove 1 from Cart</button>
+        <button
+          className="product__button product__remove_from_cart"
+          onClick={onRemoveHandler}
+        >
+          - Remove 1 from Cart
+        </button>
       )}
     </div>
   );
