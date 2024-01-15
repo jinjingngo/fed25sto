@@ -4,7 +4,7 @@ import Cart from "./Cart";
 
 const hideCartPath = ["/cart"];
 
-const Header = ({ cart = {} }) => {
+const Header = () => {
   const [showCart, setShowCart] = useState(true);
   const { pathname } = useLocation();
 
@@ -14,7 +14,7 @@ const Header = ({ cart = {} }) => {
   return (
     <div className="header">
       <Link to="./">Duck Shop</Link>
-      {showCart && <Cart cart={cart} />}
+      {showCart && <Cart />}
     </div>
   );
 };

@@ -1,22 +1,17 @@
 import "./productDetail.css";
 import { useParams } from "react-router-dom";
-import { getProduct } from "../data";
 import Product from "../components/Product";
+import useGetProduct from "../hooks/useGetProduct";
 
 const ProductDetail = ({ cart, handleAddToCart, handleRemoveFromCart }) => {
   const { id } = useParams();
-  const item = getProduct(id);
+  const { product } = useGetProduct(id);
 
-  if (!item) return <div>Item not found</div>;
+  if (!product) return <div>Item not found</div>;
   return (
     <div className="product_detail">
-      <Product
-        product={item}
-        cart={cart}
-        onAdd={handleAddToCart}
-        onRemove={handleRemoveFromCart}
-      />
-      <div className="product__description">{item.description}</div>
+      <Product product={product} />
+      <div className="product__description">{product.description}</div>
     </div>
   );
 };

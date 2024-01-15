@@ -1,20 +1,17 @@
 import "./basket.css";
 import { getInCartProducts } from "../data";
 import Product from "../components/Product";
+import useCart from "../providers/CartProvider/CartProvider.hook";
 
-const Basket = ({ cart = {}, handleAddToCart, handleRemoveFromCart }) => {
+const Basket = () => {
+  const { get } = useCart();
+  const cart = get();
   const inCartProducts = getInCartProducts(cart);
 
   return (
     <div className="basket">
       {inCartProducts.map((product) => (
-        <Product
-          key={product.id}
-          product={product}
-          cart={cart}
-          onAdd={handleAddToCart}
-          onRemove={handleRemoveFromCart}
-        />
+        <Product key={product.id} product={product} />
       ))}
     </div>
   );

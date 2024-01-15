@@ -1,14 +1,18 @@
 import { BASENAME } from "../constant";
-const Product = ({ product, cart = {}, onAdd, onRemove }) => {
+import useCart from "../providers/CartProvider/CartProvider.hook";
+
+const Product = ({ product }) => {
   const { name, price, image, id, quantity } = product;
+  const { get, add, remove } = useCart();
+  const cart = get();
   const onAddHandler = (e) => {
     e.preventDefault();
-    onAdd(id);
+    add(id);
   };
 
   const onRemoveHandler = (e) => {
     e.preventDefault();
-    onRemove(id);
+    remove(id);
   };
 
   return (

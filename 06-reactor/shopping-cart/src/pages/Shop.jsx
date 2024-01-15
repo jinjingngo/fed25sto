@@ -1,9 +1,19 @@
 import "./shop.css";
-import Body from "../components/Body";
+import { Link } from "react-router-dom";
+import Product from "../components/Product";
+import useGetProducts from "../hooks/useGetProducts";
 
-const Shop = ({ cart, handleAddToCart, handleRemoveFromCart }) => {
+const Shop = () => {
+  const { products } = useGetProducts();
+
   return (
-    <Body cart={cart} onAdd={handleAddToCart} onRemove={handleRemoveFromCart} />
+    <div className="shop">
+      {products.map((product) => (
+        <Link key={product.id} to={`./product/${product.id}`}>
+          <Product product={product} />
+        </Link>
+      ))}
+    </div>
   );
 };
 
