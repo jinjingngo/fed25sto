@@ -1,4 +1,4 @@
-import { BASENAME } from "../context";
+import { BASENAME } from "../constant";
 const Product = ({ product, cart = {}, onAdd, onRemove }) => {
   const { name, price, image, id, quantity } = product;
   const onAddHandler = (e) => {

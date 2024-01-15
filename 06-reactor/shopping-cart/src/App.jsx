@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Root from "./pages/Root";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
-import { BASENAME } from "./context";
+import { BASENAME } from "./constant";
 import Basket from "./pages/Basket";
 
 function App() {

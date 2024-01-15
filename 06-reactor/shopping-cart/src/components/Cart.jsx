@@ -3,7 +3,7 @@ import "./cart.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getInCartProducts } from "../data";
-import { BASENAME } from "../context";
+import { BASENAME } from "../constant";
 
 const Cart = ({ cart = {} }) => {
   const [count, setCount] = useState(0);
