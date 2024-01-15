@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartProviderContext from "./CartProvider.context";
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState({});
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const count = Object.values(cart).reduce(
+      (accumulator, quantity) => accumulator + quantity,
+      0
+    );
+    setCount(count);
+  }, [cart]);
 
   const get = () => {
     return cart;
@@ -35,10 +44,12 @@ const CartProvider = ({ children }) => {
 
     setCart(nonZeroCart);
   };
+
   const value = {
     get,
     add,
     remove,
+    count,
   };
 
   return (

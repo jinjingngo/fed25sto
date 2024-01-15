@@ -1,26 +1,17 @@
 import "./cart.css";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getInCartProducts } from "../data";
 import { BASENAME } from "../constant";
 import useCart from "../providers/CartProvider/CartProvider.hook";
 
 const Cart = () => {
-  const [count, setCount] = useState(0);
   const [showCartList, setShowCartList] = useState(false);
-  const { get } = useCart();
+  const { get, count } = useCart();
   const cart = get();
   console.log(cart);
   const inCartProducts = getInCartProducts(cart);
-
-  useEffect(() => {
-    const count = Object.values(cart).reduce(
-      (accumulator, quantity) => accumulator + quantity,
-      0
-    );
-    setCount(count);
-  }, [cart]);
 
   return (
     <div className="cart">
