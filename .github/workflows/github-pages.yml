@@ -48,7 +48,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Build 06 Reactor
+      - name: Build Projects
         shell: bash
         run: |
           build_directory() {
