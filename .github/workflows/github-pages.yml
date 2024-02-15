@@ -51,41 +51,39 @@ jobs:
       - name: Build 06 Reactor
         shell: bash
         run: |
-          # Navigate into the 06-reactor directory
-          cd 06-reactor
+          build_directory() {
+            directory=$1 # The directory to build, passed as an argument to this function
 
-          # Loop through each project directory and build the project
-          for project in */ ; do
-            # Only consider directories
-            if [[ -d "$project" ]]; then
-              echo "Building project: $project"
-              # Navigate into project directory
-              cd $project
+            echo "Building in directory: $directory"
+            cd $directory
 
-              # Install project dependencies using pnpm
-              pnpm install
+            for project in */ ; do
+              if [[ -d "$project" ]]; then
+                echo "Building project: $project"
+                cd $project
 
-              # Build the project - assumes a script named 'build' is present in package.json
-              pnpm run build
+                pnpm install
 
-              # Create a directory for the project's build artifacts in the 06-reactor
-              mkdir -p ../build-artifacts/${project%/}
+                pnpm run build
 
-              # Move build artifacts to the dedicated directory
-              mv dist/* ../build-artifacts/${project%/}
+                mkdir -p ../build-artifacts/${project%/}
 
-              # Navigate back to the 06-reactor directory
-              cd ..
+                mv dist/* ../build-artifacts/${project%/}
 
-              # Remove the project directory, now that the dist has been moved out
-              rm -rf ${project}
-            fi
-          done
+                cd ..
 
-          # Now move all the build artifacts back into the 06-reactor directory
-          mv build-artifacts/* .
-          # Clean up the now empty build-artifacts directory
-          rmdir build-artifacts
+                rm -rf ${project}
+              fi
+            done
+
+            mv build-artifacts/* .
+            rmdir build-artifacts
+
+            cd ..
+          }
+
+          build_directory 06-reactor
+          build_directory 07-who-browses-the-web
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
