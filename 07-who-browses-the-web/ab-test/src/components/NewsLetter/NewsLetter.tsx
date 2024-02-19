@@ -2,12 +2,23 @@ import { FormEvent } from "react";
 
 import style from "./NewsLetter.module.css";
 
-const NewsLetter = () => {
+interface NewsLetterProps {
+  isSilverBulletEnabled: boolean;
+}
+
+const NewsLetter = ({ isSilverBulletEnabled }: NewsLetterProps) => {
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const data = new FormData(event.target as HTMLFormElement);
-    console.log(Object.fromEntries(data));
+    const payload = {
+      event: "subscribe_form_submitted",
+      cta: "subscribe",
+      variant: !isSilverBulletEnabled ? "control" : "variant",
+      ...Object.fromEntries(data),
+    };
+
+    console.log(payload);
   };
   return (
     <form

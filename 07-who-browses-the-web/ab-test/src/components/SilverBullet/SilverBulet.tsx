@@ -1,9 +1,4 @@
-const isSilverBulletEnabled = Math.random() >= 0.5;
-
-console.log({ isSilverBulletEnabled });
-
 const SilverBullet = () => {
-  if (!isSilverBulletEnabled) return;
   return (
     <p>
       Often hailed as the digital marketer's silver bullet, A/B testing offers a
