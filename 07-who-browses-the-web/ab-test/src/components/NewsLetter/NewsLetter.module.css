@@ -33,12 +33,12 @@
 
 .newsletter__email_input:hover,
 .newsletter__email_input:focus {
-  border-color: #007bff;
+  border-color: #0000FF;
 }
 
 
 .newsletter__submit {
-  background-color: #007bff;
+  background-color: #0000FF;
   color: white;
   border: none;
   border-radius: 5px;
