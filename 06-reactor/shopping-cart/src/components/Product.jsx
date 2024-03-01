@@ -1,5 +1,5 @@
 import { BASENAME } from "../constant";
-import useCart from "../providers/CartProvider/CartProvider.hook";
+import useCart from "../hooks/useCart";
 
 const Product = ({ product }) => {
   const { name, price, image, id, quantity } = product;

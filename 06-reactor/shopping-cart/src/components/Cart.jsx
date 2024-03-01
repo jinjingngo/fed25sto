@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getInCartProducts } from "../data";
 import { BASENAME } from "../constant";
-import useCart from "../providers/CartProvider/CartProvider.hook";
+import useCart from "../hooks/useCart";
 
 const Cart = () => {
   const [showCartList, setShowCartList] = useState(false);

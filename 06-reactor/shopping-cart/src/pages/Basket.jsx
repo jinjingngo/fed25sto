@@ -1,7 +1,7 @@
 import "./basket.css";
 import { getInCartProducts } from "../data";
 import Product from "../components/Product";
-import useCart from "../providers/CartProvider/CartProvider.hook";
+import useCart from "../hooks/useCart";
 
 const Basket = () => {
   const { get } = useCart();
